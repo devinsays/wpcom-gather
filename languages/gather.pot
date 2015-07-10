@@ -1,0 +1,497 @@
+# Copyright (C) 2015 DevPress
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Gather 0.9.1\n"
+"Report-Msgid-Bugs-To: https://devpress.com/\n"
+"POT-Creation-Date: 2014-08-11 22:46:59+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.4.9\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+
+#: 404.php:16
+msgid "404 — Page Not Found"
+msgstr ""
+
+#: 404.php:20
+msgid "The page you are looking for doesn't exist. Try a search?"
+msgstr ""
+
+#: archive.php:23
+msgid "Author: %s"
+msgstr ""
+
+#: archive.php:26
+msgid "Day: %s"
+msgstr ""
+
+#: archive.php:29
+msgid "Month: %s"
+msgstr ""
+
+#: archive.php:32
+msgid "Year: %s"
+msgstr ""
+
+#: archive.php:35
+msgid "Archives"
+msgstr ""
+
+#: comment.php:31
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: comment.php:52 content-page.php:24 inc/template-tags.php:129
+msgid "Edit"
+msgstr ""
+
+#: comments.php:35 comments.php:55
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:36 comments.php:56
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:37 comments.php:57
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:67
+msgid "Comments are closed."
+msgstr ""
+
+#: content-masonry-download.php:19
+msgid "Free"
+msgstr ""
+
+#: content-masonry-download.php:35
+msgid "View More <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: content-masonry-download.php:39 content-masonry.php:31 content-page.php:18
+#: content-single-download.php:23 content-single.php:27 content.php:34
+msgid "Pages:"
+msgstr ""
+
+#: content-masonry-download.php:46 content-masonry.php:38
+msgid "View More"
+msgstr ""
+
+#: content-masonry.php:27 content.php:30
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: content-none.php:20
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: content-none.php:24
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: content-none.php:29
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: content-single.php:41
+msgid "About %s"
+msgstr ""
+
+#: functions.php:43 inc/customizer-options.php:126
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:44 inc/customizer-options.php:130
+msgid "Secondary Menu"
+msgstr ""
+
+#: functions.php:99
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:109 inc/customizer-options.php:402
+msgid "Footer"
+msgstr ""
+
+#: header.php:23
+msgid "Skip to content"
+msgstr ""
+
+#: inc/customizer-library/extensions/fonts.php:115
+msgid "All"
+msgstr ""
+
+#: inc/customizer-library/extensions/fonts.php:116
+msgid "Cyrillic"
+msgstr ""
+
+#: inc/customizer-library/extensions/fonts.php:117
+msgid "Cyrillic Extended"
+msgstr ""
+
+#: inc/customizer-library/extensions/fonts.php:118
+msgid "Devanagari"
+msgstr ""
+
+#: inc/customizer-library/extensions/fonts.php:119
+msgid "Greek"
+msgstr ""
+
+#: inc/customizer-library/extensions/fonts.php:120
+msgid "Greek Extended"
+msgstr ""
+
+#: inc/customizer-library/extensions/fonts.php:121
+msgid "Khmer"
+msgstr ""
+
+#: inc/customizer-library/extensions/fonts.php:122
+msgid "Latin"
+msgstr ""
+
+#: inc/customizer-library/extensions/fonts.php:123
+msgid "Latin Extended"
+msgstr ""
+
+#: inc/customizer-library/extensions/fonts.php:124
+msgid "Vietnamese"
+msgstr ""
+
+#: inc/customizer-options.php:32
+msgid "Center Header Text/Logo"
+msgstr ""
+
+#: inc/customizer-options.php:41
+msgid "Header Background Color"
+msgstr ""
+
+#: inc/customizer-options.php:50
+msgid "Header Background Image"
+msgstr ""
+
+#: inc/customizer-options.php:64
+msgid "Background Image Style"
+msgstr ""
+
+#: inc/customizer-options.php:77 inc/customizer-options.php:83
+msgid "Logo"
+msgstr ""
+
+#: inc/customizer-options.php:91
+msgid "Favicon"
+msgstr ""
+
+#: inc/customizer-options.php:95
+msgid ""
+"File must be <strong>.png</strong> format. Optimal dimensions: <strong>32px "
+"x 32px</strong>."
+msgstr ""
+
+#: inc/customizer-options.php:100
+msgid "Apple Touch Icon"
+msgstr ""
+
+#: inc/customizer-options.php:104
+msgid ""
+"File must be <strong>.png</strong> format. Optimal dimensions: "
+"<strong>152px x 152px</strong>."
+msgstr ""
+
+#: inc/customizer-options.php:112
+msgid "Navigation Styles"
+msgstr ""
+
+#: inc/customizer-options.php:158
+msgid "Background Hover (%s)"
+msgstr ""
+
+#: inc/customizer-options.php:166
+msgid "Text (%s)"
+msgstr ""
+
+#: inc/customizer-options.php:174
+msgid "Border (%s)"
+msgstr ""
+
+#: inc/customizer-options.php:182
+msgid "Search Box (%s)"
+msgstr ""
+
+#: inc/customizer-options.php:197
+msgid "Colors"
+msgstr ""
+
+#: inc/customizer-options.php:203
+msgid "Primary Color"
+msgstr ""
+
+#: inc/customizer-options.php:211
+msgid "Secondary Color"
+msgstr ""
+
+#: inc/customizer-options.php:219
+msgid "Site Title Color"
+msgstr ""
+
+#: inc/customizer-options.php:227
+msgid "Site Title Hover Color"
+msgstr ""
+
+#: inc/customizer-options.php:235
+msgid "Site Tagline Color"
+msgstr ""
+
+#: inc/customizer-options.php:246
+msgid "Layout"
+msgstr ""
+
+#: inc/customizer-options.php:257
+msgid "Standard Layout"
+msgstr ""
+
+#: inc/customizer-options.php:273
+msgid "Archive Layout"
+msgstr ""
+
+#: inc/customizer-options.php:282
+msgid "Display Sidebar on Archives"
+msgstr ""
+
+#: inc/customizer-options.php:293
+msgid "Typography"
+msgstr ""
+
+#: inc/customizer-options.php:299
+msgid "Site Title Font"
+msgstr ""
+
+#: inc/customizer-options.php:308
+msgid "Primary Font"
+msgstr ""
+
+#: inc/customizer-options.php:317
+msgid "Secondary Font"
+msgstr ""
+
+#: inc/customizer-options.php:329
+msgid "Archive"
+msgstr ""
+
+#: inc/customizer-options.php:335
+msgid "Display Excerpts"
+msgstr ""
+
+#: inc/customizer-options.php:336
+msgid "Always display excerpts instead of full content."
+msgstr ""
+
+#: inc/customizer-options.php:344 inc/customizer-options.php:369
+msgid "Display Featured Images"
+msgstr ""
+
+#: inc/customizer-options.php:355
+msgid "Post"
+msgstr ""
+
+#: inc/customizer-options.php:361
+msgid "Display Post Dates"
+msgstr ""
+
+#: inc/customizer-options.php:383
+msgid "Easy Digital Downloads"
+msgstr ""
+
+#: inc/customizer-options.php:389
+msgid "Display Downloads on Front Page"
+msgstr ""
+
+#: inc/customizer-options.php:408
+msgid "Footer Text"
+msgstr ""
+
+#: inc/extras.php:40
+msgid "Page %s"
+msgstr ""
+
+#: inc/extras.php:93
+msgid "Name"
+msgstr ""
+
+#: inc/extras.php:94
+msgid "Name *"
+msgstr ""
+
+#: inc/extras.php:100
+msgid "Email"
+msgstr ""
+
+#: inc/extras.php:101
+msgid "Email *"
+msgstr ""
+
+#: inc/extras.php:107 inc/extras.php:108
+msgid "Website"
+msgstr ""
+
+#: inc/extras.php:126
+msgid "Comment *"
+msgstr ""
+
+#: inc/mods.php:15
+msgid "Powered by %s"
+msgstr ""
+
+#: inc/mods.php:16
+msgid "http://wordpress.org/"
+msgstr ""
+
+#: inc/mods.php:20
+msgid "%1$s by %2$s."
+msgstr ""
+
+#: inc/mods.php:141
+msgid "Search"
+msgstr ""
+
+#: inc/template-tags.php:21
+msgid "Posts navigation"
+msgstr ""
+
+#: inc/template-tags.php:25
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: inc/template-tags.php:29
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/template-tags.php:52
+msgid "Post navigation"
+msgstr ""
+
+#: inc/template-tags.php:107 inc/template-tags.php:120
+#. translators: used between list items, there is a space after the comma
+msgid ", "
+msgstr ""
+
+#: search.php:11
+msgid "Search results for: %s"
+msgstr ""
+
+#: searchform.php:11 searchform.php:12
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:12 searchform.php:15
+msgid "Search..."
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Gather"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://devpress.com/gather"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Gather is a highly adaptable theme for displaying products, art, and "
+"content.  Choose your own fonts, update colors, or upload a logo using the "
+"theme customizer.  Multiple menu locations, social icons, and widget areas "
+"are available.  Integrates well with popular plugins like JetPack and Easy "
+"Digital Downloads.  Gather is responsive and looks great on all devices."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "DevPress"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://devpress.com"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Full Width Page"
+msgstr ""
+
+#: archive.php:29
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: archive.php:32
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: comment.php:48
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: comments.php:28
+msgctxt "comments title"
+msgid "1 Response"
+msgid_plural "%1$s Responses"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/customizer-library/extensions/fonts.php:184
+msgctxt "font style"
+msgid "Serif"
+msgstr ""
+
+#: inc/customizer-library/extensions/fonts.php:188
+msgctxt "font style"
+msgid "Sans Serif"
+msgstr ""
+
+#: inc/customizer-library/extensions/fonts.php:192
+msgctxt "font style"
+msgid "Monospaced"
+msgstr ""
+
+#: inc/template-tags.php:55
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav\">&larr;</span> %title"
+msgstr ""
+
+#: inc/template-tags.php:56
+msgctxt "Next post link"
+msgid "%title <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/template-tags.php:80
+msgctxt "post date"
+msgid "%s"
+msgstr ""
+
+#: inc/template-tags.php:85
+msgctxt "post author"
+msgid "By %s"
+msgstr ""

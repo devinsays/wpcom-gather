@@ -1,0 +1,104 @@
+@font-face {
+	font-family: 'gather-icons';
+	src:url('gather-icons.eot?v1.1');
+	src:url('gather-icons.eot?#v1.1') format('embedded-opentype'),
+		url('gather-icons.woff?v1.1') format('woff'),
+		url('gather-icons.ttf?v1.1') format('truetype'),
+		url('gather-icons.svg?v1.1#gather') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="gather-icon-"], [class*=" gather-icon-"] {
+	font-family: 'gather-icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.gather-icon-search:before {
+	content: "\f002";
+}
+.gather-icon-search-plus:before {
+	content: "\f00e";
+}
+.gather-icon-search-minus:before {
+	content: "\f010";
+}
+.gather-icon-tags:before {
+	content: "\f02c";
+}
+.gather-icon-pencil:before {
+	content: "\f040";
+}
+.gather-icon-folder-open:before {
+	content: "\f07c";
+}
+.gather-icon-twitter:before {
+	content: "\f099";
+}
+.gather-icon-facebook:before {
+	content: "\f09a";
+}
+.gather-icon-github:before {
+	content: "\f09b";
+}
+.gather-icon-navicon:before {
+	content: "\f0c9";
+}
+.gather-icon-pinterest:before {
+	content: "\f0d2";
+}
+.gather-icon-google-plus:before {
+	content: "\f0d5";
+}
+.gather-icon-linkedin:before {
+	content: "\f0e1";
+}
+.gather-icon-mail-reply:before {
+	content: "\f112";
+}
+.gather-icon-pencil-square:before {
+	content: "\f14b";
+}
+.gather-icon-instagram:before {
+	content: "\f16d";
+}
+.gather-icon-flickr:before {
+	content: "\f16e";
+}
+.gather-icon-tumblr:before {
+	content: "\f173";
+}
+.gather-icon-dribbble:before {
+	content: "\f17d";
+}
+.gather-icon-skype:before {
+	content: "\f17e";
+}
+.gather-icon-vimeo-square:before {
+	content: "\f194";
+}
+.gather-icon-wordpress:before {
+	content: "\f19a";
+}
+.gather-icon-behance:before {
+	content: "\f1b4";
+}
+.gather-icon-spotify:before {
+	content: "\f1bc";
+}
+.gather-icon-link:before {
+	content: "\f0c1";
+}
+.gather-icon-caret-down:before {
+	content: "\f0d7";
+}
+.gather-icon-soundcloud:before {
+	content: "\f1be";
+}
