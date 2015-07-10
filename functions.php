@@ -124,32 +124,60 @@ function gather_widgets_init() {
 }
 add_action( 'widgets_init', 'gather_widgets_init' );
 
+if ( ! function_exists( 'gather_body_fonts' ) ) :
 /**
- * Enqueue fonts.
+ * Enqueue web fonts.
  */
-function gather_fonts() {
+function gather_body_fonts() {
 
-	// Font options
-	$fonts = array();
+	// Google font URL to load
+	$font_url = '';
 
-	// Site title font only required when logo not in use
-	if ( ! get_theme_mod( 'logo', 0 ) ) :
-		$fonts[0] = get_theme_mod( 'site-title-font', customizer_library_get_default( 'site-title-font' ) );
-	endif;
+    /* Translators: If there are characters in your language that are not
+    * supported by Roboto, translate this to 'off'. Do not translate
+    * into your own language.
+    */
+    $primary = _x( 'active', 'Roboto font: active or inactive', 'gather' );
+    $secondary = _x( 'active', 'Merriweather font: active or inactive', 'gather' );
 
-	$fonts[1] = get_theme_mod( 'primary-font', customizer_library_get_default( 'primary-font' ) );
-	$fonts[2] = get_theme_mod( 'secondary-font', customizer_library_get_default( 'secondary-font' ) );
+    if ( 'inactive' !== $primary && 'inactive' !== $secondary ) :
 
-	$font_uri = customizer_library_get_google_font_uri( $fonts );
+        $font_families = array();
 
-	// Load Google Fonts
-	wp_enqueue_style( 'gather-body-fonts', $font_uri, array(), null, 'screen' );
+        if ( 'inactive' !== $primary ) {
+            $font_families[] = 'Roboto:400italic,700italic,700,400';
+        }
+
+		if ( 'inactive' !== $secondary ) {
+            $font_families[] = 'Merriweather:400,400italic,700,700italic';
+        }
+
+        $query_args = array(
+            'family' => urlencode( implode( '|', $font_families ) ),
+            'subset' => urlencode( 'latin,latin-ext' ),
+        );
+
+        $font_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+
+        // Load Google Fonts
+		wp_enqueue_style( 'gather-body-fonts', $font_url, array(), null, 'screen' );
+
+    endif;
+
+}
+add_action( 'wp_enqueue_scripts', 'gather_body_fonts' );
+endif;
+
+/**
+ * Enqueue icon font.
+ */
+function gather_icon_font() {
 
 	// Icon Font
 	wp_enqueue_style( 'gather-icons', get_template_directory_uri() . '/fonts/gather-icons.css', array(), '0.4.0' );
 
 }
-add_action( 'wp_enqueue_scripts', 'gather_fonts' );
+add_action( 'wp_enqueue_scripts', 'gather_icon_font' );
 
 /**
  * Enqueue scripts and styles.
@@ -249,14 +277,8 @@ require get_template_directory() . '/inc/template-tags.php';
 // Custom functions that act independently of the theme templates.
 require get_template_directory() . '/inc/extras.php';
 
-// Helper library for the theme customizer.
-require get_template_directory() . '/inc/customizer-library/customizer-library.php';
-
 // Define options for the theme customizer.
-require get_template_directory() . '/inc/customizer-options.php';
-
-// Output inline styles based on theme customizer selections.
-require get_template_directory() . '/inc/styles.php';
+require get_template_directory() . '/inc/customizer.php';
 
 // Additional filters and actions based on theme customizer selections.
 require get_template_directory() . '/inc/mods.php';

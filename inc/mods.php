@@ -34,23 +34,18 @@ function gather_body_classes( $classes ) {
 	global $post;
 
 	if ( gather_load_masonry() ) {
-		$classes[] = get_theme_mod( 'archive-layout', customizer_library_get_default( 'archive-layout' ) );
+		$classes[] = get_theme_mod( 'archive-layout', 'column-masonry-3' );
 		$classes[] = 'masonry';
 	}
 
 	if ( gather_show_sidebar() ) {
-		$classes[] = get_theme_mod( 'standard-layout', customizer_library_get_default( 'standard-layout' ) );
+		$classes[] = get_theme_mod( 'standard-layout', 'sidebar-right' );
 	} else {
 		$classes[] = 'no-sidebar';
 	}
 
 	// Simplify body class for full-width template
 	if ( isset( $post ) && ( is_page_template( 'templates/full-width.php' ) ) ) {
-		foreach( $classes as $key => $value) {
-			if ( $value == 'page-template-templatesfull-width-php') {
-				$classes[$key] = 'page-template-full-width-php';
-			}
-		}
 		$classes[] = 'full-width';
 	}
 
@@ -95,7 +90,7 @@ add_filter( 'body_class', 'gather_body_classes' );
 	 	if ( is_post_type_archive( 'forum' ) ) {
 		 	return false;
 	 	}
- 		$archive_layout = get_theme_mod( 'archive-layout', customizer_library_get_default( 'archive-layout' ) );
+ 		$archive_layout = get_theme_mod( 'archive-layout', 'column-masonry-3' );
  		if ( $archive_layout != 'standard' ) {
  			return true;
  		}
@@ -110,7 +105,7 @@ add_filter( 'body_class', 'gather_body_classes' );
  * @since Gather 0.1
  */
  function gather_get_columns() {
-	 $layout = get_theme_mod( 'archive-layout', customizer_library_get_default( 'archive-layout' ) );
+	 $layout = get_theme_mod( 'archive-layout', 'column-masonry-3' );
 	 switch ( $layout ) {
 	 	case '4-column-masonry':
 	 		return '4';
@@ -199,55 +194,3 @@ function gather_social_nav_class( $classes, $item ) {
 
 }
 add_filter( 'nav_menu_css_class', 'gather_social_nav_class', 10, 2 );
-
-/**
- * Loads the downloads post type archive as the front page.
- * Requires Easy Digital Downloads plugin to be installed.
- *
- * @since Gather 0.6
- */
-function gather_downloads_front_page( $query ) {
-
-	// Only load if Easy Digital Downloads is installed
-	if ( ! class_exists( 'Easy_Digital_Downloads' ) ) {
-		return;
-	}
-
-	// Only filter the main query on the front-end
-    if ( is_admin() || ! $query->is_main_query() ) {
-    	return;
-    }
-
-	// Only filter if the option is set
-	if ( ! get_theme_mod( 'front-page-downloads', 0 ) ) {
-		return;
-	}
-
-    global $wp;
-    $front = false;
-
-	// If the latest posts are showing on the home page
-    if ( ( is_home() && empty( $wp->query_string ) ) ) {
-    	$front = true;
-    }
-
-	// If a static page is set as the home page
-    if ( ( $query->get( 'page_id' ) == get_option( 'page_on_front' ) && get_option( 'page_on_front' ) ) || empty( $wp->query_string ) ) {
-    	$front = true;
-    }
-
-    if ( $front ) :
-
-        $query->set( 'post_type', 'download' );
-        $query->set( 'page_id', '' );
-
-        // Set properties to match an archive
-        $query->is_page = 0;
-        $query->is_singular = 0;
-        $query->is_post_type_archive = 1;
-        $query->is_archive = 1;
-
-    endif;
-
-}
-add_action( 'pre_get_posts', 'gather_downloads_front_page' );

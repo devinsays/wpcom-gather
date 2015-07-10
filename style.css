@@ -404,12 +404,8 @@ body {
   -webkit-font-smoothing: antialiased;
   word-wrap: break-word;
   min-height: 100%;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -464,9 +460,7 @@ a:active {
 /* Layout
 -------------------------------------------------------------- */
 #page {
-  -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 .content-area {
@@ -584,16 +578,12 @@ a:active {
   background-size: cover;
   background-position: 50% 50%;
   color: #5bc08c;
-  font-weight: 500;
   padding: 40px 0;
 }
 
 .site-title {
-  font-family: 'Monoton', sans-serif;
   font-size: 64px;
   line-height: 1;
-  font-weight: 300;
-  text-transform: uppercase;
   margin: 0;
 }
 
@@ -700,7 +690,6 @@ a:active {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: pointer;
-  transition: -webkit-transform .2s ease-in-out;
   transition: transform .2s ease-in-out;
 }
 
@@ -773,9 +762,7 @@ a:active {
   }
 
   .dropdown-toggle.toggled:after {
-    -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
 }
 /* Large Screen Sizes */
