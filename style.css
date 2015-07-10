@@ -1670,18 +1670,6 @@ a:active {
   /* Above WP toolbar */
 }
 
-/* Clearings
---------------------------------------------------------------*/
-.clear:before,
-.clear:after {
-  content: '';
-  display: table;
-}
-
-.clear:after {
-  clear: both;
-}
-
 /* Alignments
 --------------------------------------------------------------*/
 .alignleft {
@@ -1816,12 +1804,6 @@ object {
   *zoom: 1;
 }
 
-/* Easy Digital Downloads Support
---------------------------------------------------------------*/
-.single-download .edd_download_purchase_form {
-  margin-bottom: 0;
-}
-
 /* Jetpack Support
 --------------------------------------------------------------*/
 #infinite-handle {
@@ -1875,37 +1857,4 @@ object {
 
 .entry-content .sharedaddy {
   padding-top: 30px;
-}
-
-/* Event Calendar Support
---------------------------------------------------------------*/
-#tribe-events-pg-template {
-  max-width: 790px;
-  padding: 0;
-}
-
-#tribe-events {
-  background: #fff;
-  border-radius: 4px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  margin: 30px 0 60px;
-  overflow: hidden;
-  padding: 4% 8%;
-}
-
-#tribe-events .secondary {
-  float: none;
-  width: auto;
-}
-
-@media screen and (max-width: 510px) {
-  .tribe-events-page-template .col-width {
-    width: 100%;
-  }
-
-  #tribe-events {
-    margin-top: 1px;
-    border-radius: 0;
-    margin: 0;
-  }
 }

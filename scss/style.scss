@@ -485,7 +485,6 @@ a:active {
 /* Columns */
 
 @media screen and (min-width:881px) {
-
 	.masonry .hentry {
 		float:left;
 	}
@@ -516,7 +515,6 @@ a:active {
 	.column-masonry-4 .hentry:nth-child(4n) {
 		margin-right:0;
 	}
-
 }
 
 @media screen and (min-width:510px) and (max-width:880px) {
@@ -781,14 +779,12 @@ a:active {
 }
 
 @media screen and (max-width:510px) {
-
 	#author, #email, #url {
 		width: 100%;
 	}
 	#respond textarea {
 		width:100%;
 	}
-
 }
 
 /* Footer
@@ -815,7 +811,6 @@ a:active {
 }
 
 @media screen and (min-width:510px) and (max-width:880px) {
-
 	.footer-widgets.columns-2 .widget,
 	.footer-widgets.columns-3 .widget {
 		width:45%;
@@ -826,7 +821,6 @@ a:active {
 	.footer-widgets.columns-3 .widget:nth-of-type(2n) {
 		margin-right:0;
 	}
-
 }
 
 @media screen and (min-width:881px) {
@@ -889,18 +883,6 @@ a:active {
 	top: 5px;
 	width: auto;
 	z-index: 100000; /* Above WP toolbar */
-}
-
-/* Clearings
---------------------------------------------------------------*/
-
-.clear:before,
-.clear:after {
-    content: '';
-    display: table;
-}
-.clear:after {
-    clear: both;
 }
 
 /* Alignments
@@ -1025,12 +1007,6 @@ object {
   *zoom: 1;
 }
 
-/* Easy Digital Downloads Support
---------------------------------------------------------------*/
-.single-download .edd_download_purchase_form {
-	margin-bottom: 0;
-}
-
 /* Jetpack Support
 --------------------------------------------------------------*/
 
@@ -1077,34 +1053,4 @@ object {
 }
 .entry-content .sharedaddy {
 	padding-top:30px;
-}
-
-/* Event Calendar Support
---------------------------------------------------------------*/
-
-#tribe-events-pg-template {
-	max-width: 790px;
-	padding: 0;
-}
-#tribe-events {
-	background: #fff;
-	border-radius: 4px;
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-	margin:30px 0 60px;
-	overflow: hidden;
-	padding: 4% 8%;
-}
-#tribe-events .secondary {
-	float:none;
-	width:auto;
-}
-@media screen and (max-width:510px) {
-	.tribe-events-page-template .col-width {
-		width: 100%;
-	}
-	#tribe-events  {
-		margin-top:1px;
-		border-radius: 0;
-		margin:0;
-	}
 }

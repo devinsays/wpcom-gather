@@ -25,7 +25,7 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 
 #: 404.php:16
-msgid "404 — Page Not Found"
+msgid "404 - Page Not Found"
 msgstr ""
 
 #: 404.php:20
@@ -85,7 +85,7 @@ msgid "View More <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: content-masonry-download.php:39 content-masonry.php:31 content-page.php:18
-#: content-single-download.php:23 content-single.php:27 content.php:34
+#: content-single.php:27 content.php:34
 msgid "Pages:"
 msgstr ""
 
@@ -121,23 +121,23 @@ msgstr ""
 msgid "About %s"
 msgstr ""
 
-#: functions.php:43 inc/customizer-options.php:126
+#: functions.php:44
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:44 inc/customizer-options.php:130
+#: functions.php:45
 msgid "Secondary Menu"
 msgstr ""
 
-#: functions.php:99
+#: functions.php:104
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:109 inc/customizer-options.php:402
+#: functions.php:114 inc/customizer-options.php:290
 msgid "Footer"
 msgstr ""
 
-#: header.php:23
+#: header.php:22
 msgid "Skip to content"
 msgstr ""
 
@@ -201,135 +201,87 @@ msgstr ""
 msgid "Logo"
 msgstr ""
 
-#: inc/customizer-options.php:91
-msgid "Favicon"
-msgstr ""
-
-#: inc/customizer-options.php:95
-msgid ""
-"File must be <strong>.png</strong> format. Optimal dimensions: <strong>32px "
-"x 32px</strong>."
-msgstr ""
-
-#: inc/customizer-options.php:100
-msgid "Apple Touch Icon"
-msgstr ""
-
-#: inc/customizer-options.php:104
-msgid ""
-"File must be <strong>.png</strong> format. Optimal dimensions: "
-"<strong>152px x 152px</strong>."
-msgstr ""
-
-#: inc/customizer-options.php:112
+#: inc/customizer-options.php:94
 msgid "Navigation Styles"
 msgstr ""
 
-#: inc/customizer-options.php:158
-msgid "Background Hover (%s)"
-msgstr ""
-
-#: inc/customizer-options.php:166
-msgid "Text (%s)"
-msgstr ""
-
-#: inc/customizer-options.php:174
-msgid "Border (%s)"
-msgstr ""
-
-#: inc/customizer-options.php:182
+#: inc/customizer-options.php:101 inc/customizer-options.php:111
 msgid "Search Box (%s)"
 msgstr ""
 
-#: inc/customizer-options.php:197
+#: inc/customizer-options.php:123
 msgid "Colors"
 msgstr ""
 
-#: inc/customizer-options.php:203
-msgid "Primary Color"
-msgstr ""
-
-#: inc/customizer-options.php:211
-msgid "Secondary Color"
-msgstr ""
-
-#: inc/customizer-options.php:219
+#: inc/customizer-options.php:129
 msgid "Site Title Color"
 msgstr ""
 
-#: inc/customizer-options.php:227
+#: inc/customizer-options.php:137
 msgid "Site Title Hover Color"
 msgstr ""
 
-#: inc/customizer-options.php:235
+#: inc/customizer-options.php:145
 msgid "Site Tagline Color"
 msgstr ""
 
-#: inc/customizer-options.php:246
+#: inc/customizer-options.php:156
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer-options.php:257
+#: inc/customizer-options.php:167
 msgid "Standard Layout"
 msgstr ""
 
-#: inc/customizer-options.php:273
+#: inc/customizer-options.php:183
 msgid "Archive Layout"
 msgstr ""
 
-#: inc/customizer-options.php:282
+#: inc/customizer-options.php:192
 msgid "Display Sidebar on Archives"
 msgstr ""
 
-#: inc/customizer-options.php:293
+#: inc/customizer-options.php:203
 msgid "Typography"
 msgstr ""
 
-#: inc/customizer-options.php:299
+#: inc/customizer-options.php:209
 msgid "Site Title Font"
 msgstr ""
 
-#: inc/customizer-options.php:308
+#: inc/customizer-options.php:218
 msgid "Primary Font"
 msgstr ""
 
-#: inc/customizer-options.php:317
+#: inc/customizer-options.php:227
 msgid "Secondary Font"
 msgstr ""
 
-#: inc/customizer-options.php:329
+#: inc/customizer-options.php:239
 msgid "Archive"
 msgstr ""
 
-#: inc/customizer-options.php:335
+#: inc/customizer-options.php:245
 msgid "Display Excerpts"
 msgstr ""
 
-#: inc/customizer-options.php:336
+#: inc/customizer-options.php:246
 msgid "Always display excerpts instead of full content."
 msgstr ""
 
-#: inc/customizer-options.php:344 inc/customizer-options.php:369
+#: inc/customizer-options.php:254 inc/customizer-options.php:279
 msgid "Display Featured Images"
 msgstr ""
 
-#: inc/customizer-options.php:355
+#: inc/customizer-options.php:265
 msgid "Post"
 msgstr ""
 
-#: inc/customizer-options.php:361
+#: inc/customizer-options.php:271
 msgid "Display Post Dates"
 msgstr ""
 
-#: inc/customizer-options.php:383
-msgid "Easy Digital Downloads"
-msgstr ""
-
-#: inc/customizer-options.php:389
-msgid "Display Downloads on Front Page"
-msgstr ""
-
-#: inc/customizer-options.php:408
+#: inc/customizer-options.php:296
 msgid "Footer Text"
 msgstr ""
 

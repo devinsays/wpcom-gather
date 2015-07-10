@@ -10,13 +10,6 @@
  */
 define( 'GATHER_VERSION', '0.9.1' );
 
-/**
- * Set the content width based on the theme's design and stylesheet.
- */
-if ( ! isset( $content_width ) ) {
-	$content_width = 664; /* pixels */
-}
-
 if ( ! function_exists( 'gather_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -38,6 +31,14 @@ function gather_setup() {
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
+	/*
+	 * Let WordPress manage the document title.
+	 * By adding theme support, we declare that this theme does not use a
+	 * hard-coded <title> tag in the document head, and expect WordPress to
+	 * provide it for us.
+	 */
+	add_theme_support( 'title-tag' );
+
 	// Registers navigation menus
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'gather' ),
@@ -55,14 +56,6 @@ function gather_setup() {
 	// Post editor styles
 	add_editor_style( 'editor-style.css' );
 
-	/*
-	 * Enable support for Post Formats.
-	 * See http://codex.wordpress.org/Post_Formats
-	 */
-	add_theme_support( 'post-formats', array(
-		'image', 'gallery', 'video', 'quote', 'link'
-	) );
-
 	// Setup the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'gather_custom_background_args', array(
 		'default-color' => 'f2f2f2',
@@ -71,6 +64,18 @@ function gather_setup() {
 }
 endif; // gather_setup
 add_action( 'after_setup_theme', 'gather_setup' );
+
+/**
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
+ */
+function gather_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'gather_content_width', 664 );
+}
+add_action( 'after_setup_theme', 'gather_content_width', 0 );
 
 if ( ! function_exists( 'gather_register_image_sizes' ) ) :
 /*
@@ -243,11 +248,6 @@ require get_template_directory() . '/inc/template-tags.php';
 
 // Custom functions that act independently of the theme templates.
 require get_template_directory() . '/inc/extras.php';
-
-// Color utility functions.
-if ( ! class_exists( 'Jetpack_Color' ) ) {
-	require get_template_directory() . '/inc/jetpack.class.color.php';
-}
 
 // Helper library for the theme customizer.
 require get_template_directory() . '/inc/customizer-library/customizer-library.php';

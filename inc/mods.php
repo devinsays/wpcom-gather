@@ -201,26 +201,6 @@ function gather_social_nav_class( $classes, $item ) {
 add_filter( 'nav_menu_css_class', 'gather_social_nav_class', 10, 2 );
 
 /**
- * Display favicon and apple-touch logo in the head
- *
- * @since Gather 0.1
- */
-if ( ! function_exists( 'gather_display_favicons' ) ) :
-function gather_display_favicons() {
-	$logo_favicon = get_theme_mod( 'logo-favicon' );
-	if ( ! empty( $logo_favicon ) ) : ?>
-		<link rel="icon" href="<?php echo esc_url( $logo_favicon ); ?>" />
-	<?php endif;
-
-	$logo_apple_touch = get_theme_mod( 'logo-apple-touch' );
-	if ( ! empty( $logo_apple_touch ) ) : ?>
-		<link rel="apple-touch-icon" href="<?php echo esc_url( $logo_apple_touch ); ?>" />
-	<?php endif;
-}
-endif;
-add_action( 'wp_head', 'gather_display_favicons' );
-
-/**
  * Loads the downloads post type archive as the front page.
  * Requires Easy Digital Downloads plugin to be installed.
  *
