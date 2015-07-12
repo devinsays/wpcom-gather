@@ -153,8 +153,12 @@ msgstr ""
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer.php:75 inc/customizer.php:89 inc/customizer.php:237
+#: inc/customizer.php:75 inc/customizer.php:237
 msgid "Standard Layout"
+msgstr ""
+
+#: inc/customizer.php:89
+msgid "Archive Layout"
 msgstr ""
 
 #: inc/customizer.php:102
@@ -308,11 +312,16 @@ msgstr[1] ""
 #. Translators: If there are characters in your language that are not
 #. * supported by Roboto, translate this to 'off'. Do not translate
 #. * into your own language.
-msgctxt "Roboto font: active or inactive"
+msgctxt "Monoton font: active or inactive"
 msgid "active"
 msgstr ""
 
 #: functions.php:141
+msgctxt "Roboto font: active or inactive"
+msgid "active"
+msgstr ""
+
+#: functions.php:142
 msgctxt "Merriweather font: active or inactive"
 msgid "active"
 msgstr ""

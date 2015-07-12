@@ -137,12 +137,17 @@ function gather_body_fonts() {
     * supported by Roboto, translate this to 'off'. Do not translate
     * into your own language.
     */
+    $accent = _x( 'active', 'Monoton font: active or inactive', 'gather' );
     $primary = _x( 'active', 'Roboto font: active or inactive', 'gather' );
     $secondary = _x( 'active', 'Merriweather font: active or inactive', 'gather' );
 
-    if ( 'inactive' !== $primary && 'inactive' !== $secondary ) :
+    if ( 'active' == $accent || 'active' == $primary || 'active' == $secondary ) :
 
         $font_families = array();
+
+        if ( 'inactive' !== $accent ) {
+            $font_families[] = 'Monoton';
+        }
 
         if ( 'inactive' !== $primary ) {
             $font_families[] = 'Roboto:400italic,700italic,700,400';

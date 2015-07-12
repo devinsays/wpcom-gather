@@ -588,8 +588,11 @@ a:active {
 }
 
 .site-title {
+  font-family: 'Monoton';
   font-size: 64px;
   line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
   margin: 0;
 }
 
