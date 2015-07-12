@@ -14,7 +14,7 @@ function gather_customize_controls( $wp_customize ) {
 
 	// Header Settings
 	$wp_customize->add_setting( 'center-branding', array(
-		'default'    =>  1,
+		'default'    =>  0,
 		'transport'  =>  'refresh',
 		'sanitize_callback' => 'gather_sanitize_checkbox'
 	) );
@@ -29,7 +29,7 @@ function gather_customize_controls( $wp_customize ) {
 	if ( has_nav_menu( 'primary' ) ):
 
 		$wp_customize->add_setting( 'primary-menu-search', array(
-			'default'    =>  1,
+			'default'    =>  0,
 			'transport'  =>  'refresh',
 			'sanitize_callback' => 'gather_sanitize_checkbox'
 		) );
@@ -45,7 +45,7 @@ function gather_customize_controls( $wp_customize ) {
 	if ( has_nav_menu( 'secondary' ) ):
 
 		$wp_customize->add_setting( 'secondary-menu-search', array(
-			'default'    =>  1,
+			'default'    =>  0,
 			'transport'  =>  'refresh',
 			'sanitize_callback' => 'gather_sanitize_checkbox'
 		) );
@@ -64,11 +64,11 @@ function gather_customize_controls( $wp_customize ) {
 		'priority'   => 70,
 	) );
 
-	// @TODO Needs sanitization callback
 	$wp_customize->add_setting( 'standard-layout', array(
 		'default'    =>  1,
 		'transport'  =>  'refresh',
-		'default' => 'sidebar-right'
+		'default' => 'sidebar-right',
+		'sanitize_callback' => 'gather_sanitize_standard_layout'
 	) );
 
 	$wp_customize->add_control( 'standard-layout', array(
@@ -78,15 +78,15 @@ function gather_customize_controls( $wp_customize ) {
 		'choices'	=> gather_get_select_choices( 'standard-layout' )
 	) );
 
-	// @TODO Needs sanitization callback
 	$wp_customize->add_setting( 'archive-layout', array(
 		'default'    =>  1,
 		'transport'  =>  'refresh',
-		'default' => 'column-masonry-3'
+		'default' => 'column-masonry-3',
+		'sanitize_callback' => 'gather_sanitize_archive_layout'
 	) );
 
 	$wp_customize->add_control( 'archive-layout', array(
-		'label'   => __( 'Standard Layout', 'gather' ),
+		'label'   => __( 'Archive Layout', 'gather' ),
 		'section'   => 'layout',
 		'type'      => 'select',
 		'choices'	=> gather_get_select_choices( 'archive-layout' )
@@ -173,7 +173,7 @@ function gather_customize_controls( $wp_customize ) {
 
 	$wp_customize->add_setting( 'footer-text', array(
 		'default'           => gather_get_default_footer_text(),
-		'sanitize_callback' => 'luminate_sanitize_textarea'
+		'sanitize_callback' => 'gather_sanitize_textarea'
 	) );
 
 	$wp_customize->add_control( 'footer-text', array(
@@ -264,6 +264,7 @@ function gather_sanitize_checkbox( $value ) {
 }
 endif;
 
+if ( ! function_exists( 'gather_sanitize_textarea' ) ) :
 /**
  * Sanitize textarea.
  *
@@ -280,3 +281,44 @@ function gather_sanitize_textarea( $content ) {
 	return wp_kses( $content, wp_kses_allowed_html( 'post' ) );
 
 }
+endif;
+
+if ( ! function_exists( 'gather_sanitize_archive_layout' ) ) :
+/**
+ * Sanitization callback for standard layout select.
+ *
+ * @since Gather 1.0.0
+ *
+ * @param string $value Layout value.
+ * @return string Layout value.
+ */
+function gather_sanitize_archive_layout( $value ) {
+	$color_schemes = gather_get_select_choices( 'archive-layout' );
+
+	if ( ! array_key_exists( $value, $color_schemes ) ) {
+		$value = 'column-masonry-3';
+	}
+
+	return $value;
+}
+endif; // gather_sanitize_archive_layout
+
+if ( ! function_exists( 'gather_sanitize_standard_layout' ) ) :
+/**
+ * Sanitization callback for standard layout select.
+ *
+ * @since Gather 1.0.0
+ *
+ * @param string $value Layout value.
+ * @return string Layout value.
+ */
+function gather_sanitize_standard_layout( $value ) {
+	$color_schemes = gather_get_select_choices( 'standard-layout' );
+
+	if ( ! array_key_exists( $value, $color_schemes ) ) {
+		$value = 'sidebar-right';
+	}
+
+	return $value;
+}
+endif; // gather_sanitize_standard_layout

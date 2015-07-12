@@ -603,9 +603,8 @@ a:active {
   color: #f99868;
 }
 
-.site-logo {
-  margin: 0;
-  line-height: 1;
+.site-logo-link {
+  display: inline-block;
 }
 
 .site-description {
@@ -1514,11 +1513,6 @@ a:active {
 
 #respond p {
   margin-bottom: 20px;
-}
-
-#respond label {
-  display: none;
-  /* Using placeholders instead */
 }
 
 #author, #email, #url {

@@ -157,7 +157,6 @@
 				$('#posts-wrap').masonry( 'appended', $elements );
 				$elements.imagesLoaded( function() {
 					$('#posts-wrap').masonry();
-					$('.hentry').fitVids();
 				});
 
 			});

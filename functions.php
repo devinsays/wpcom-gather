@@ -240,5 +240,8 @@ require get_template_directory() . '/inc/customizer.php';
 // Additional filters and actions based on theme customizer selections.
 require get_template_directory() . '/inc/mods.php';
 
+// Style options based on theme customizer selections.
+require get_template_directory() . '/inc/styles.php';
+
 // Load Jetpack compatibility file.
 require get_template_directory() . '/inc/jetpack.php';
