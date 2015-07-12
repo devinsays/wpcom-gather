@@ -41,17 +41,13 @@
 		<div class="site-branding">
 			<div class="col-width">
 
-				<?php if ( get_theme_mod( 'logo', 0 ) ) {
-					$class = 'site-logo';
-					$output = '<img src="' . esc_url( get_theme_mod( 'logo' ) ) . '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '">';
-				} else {
-					$class = 'site-title';
-					$output = get_bloginfo( 'name' );
-				} ?>
+				<?php if ( function_exists( 'jetpack_has_site_logo' ) && jetpack_has_site_logo() ) :
+					jetpack_the_site_logo();
+				endif; ?>
 
-				<h1 class="<?php echo esc_attr( $class ); ?>">
+				<h1 class="site-title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<?php echo $output; ?>
+						<?php echo get_bloginfo( 'name' ); ?>
 					</a>
 				</h1>
 

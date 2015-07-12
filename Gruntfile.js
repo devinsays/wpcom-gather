@@ -32,18 +32,6 @@ module.exports = function(grunt) {
 				dest: 'style.css'
 			}
 		},
-		concat: {
-		    build: {
-		        src: [
-		            'js/skip-link-focus-fix.js',
-		            'js/jquery.fastclick.js',
-		            'js/jquery.fittext.js',
-		            'js/jquery.fitvids.js',
-		            'js/global.js'
-		        ],
-		        dest: 'js/gather.min.js',
-		    }
-		},
 	    // https://www.npmjs.org/package/grunt-wp-i18n
 	    makepot: {
 	        target: {
@@ -63,14 +51,6 @@ module.exports = function(grunt) {
 					}
 				}
 			}
-		},
-		exec: {
-			txpull: { // Pull Transifex translation - grunt exec:txpull
-				cmd: 'tx pull -a --minimum-perc=90' // Percentage translated
-			},
-			txpush_s: { // Push pot to Transifex - grunt exec:txpush_s
-				cmd: 'tx push -s'
-			},
 		},
 		dirs: {
 			lang: 'languages',
@@ -136,7 +116,6 @@ module.exports = function(grunt) {
     	'replace',
     	'sass',
     	'autoprefixer',
-    	'concat:build',
 		'makepot',
 		'cssjanus'
 	]);

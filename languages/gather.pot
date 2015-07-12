@@ -52,27 +52,19 @@ msgstr ""
 msgid "Archives"
 msgstr ""
 
-#: comment.php:31
-msgid "Your comment is awaiting moderation."
-msgstr ""
-
-#: comment.php:52 content-page.php:24 inc/template-tags.php:129
-msgid "Edit"
-msgstr ""
-
-#: comments.php:35 comments.php:55
+#: comments.php:38 comments.php:59
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:36 comments.php:56
-msgid "&larr; Older Comments"
+#: comments.php:41 comments.php:62
+msgid "Older Comments"
 msgstr ""
 
-#: comments.php:37 comments.php:57
-msgid "Newer Comments &rarr;"
+#: comments.php:42 comments.php:63
+msgid "Newer Comments"
 msgstr ""
 
-#: comments.php:67
+#: comments.php:75
 msgid "Comments are closed."
 msgstr ""
 
@@ -117,6 +109,10 @@ msgid ""
 "searching can help."
 msgstr ""
 
+#: content-page.php:24 inc/template-tags.php:129
+msgid "Edit"
+msgstr ""
+
 #: content-single.php:41
 msgid "About %s"
 msgstr ""
@@ -133,7 +129,7 @@ msgstr ""
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:114 inc/customizer-options.php:290
+#: functions.php:114
 msgid "Footer"
 msgstr ""
 
@@ -141,176 +137,76 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/customizer-library/extensions/fonts.php:115
-msgid "All"
-msgstr ""
-
-#: inc/customizer-library/extensions/fonts.php:116
-msgid "Cyrillic"
-msgstr ""
-
-#: inc/customizer-library/extensions/fonts.php:117
-msgid "Cyrillic Extended"
-msgstr ""
-
-#: inc/customizer-library/extensions/fonts.php:118
-msgid "Devanagari"
-msgstr ""
-
-#: inc/customizer-library/extensions/fonts.php:119
-msgid "Greek"
-msgstr ""
-
-#: inc/customizer-library/extensions/fonts.php:120
-msgid "Greek Extended"
-msgstr ""
-
-#: inc/customizer-library/extensions/fonts.php:121
-msgid "Khmer"
-msgstr ""
-
-#: inc/customizer-library/extensions/fonts.php:122
-msgid "Latin"
-msgstr ""
-
-#: inc/customizer-library/extensions/fonts.php:123
-msgid "Latin Extended"
-msgstr ""
-
-#: inc/customizer-library/extensions/fonts.php:124
-msgid "Vietnamese"
-msgstr ""
-
-#: inc/customizer-options.php:32
+#: inc/customizer.php:23
 msgid "Center Header Text/Logo"
 msgstr ""
 
-#: inc/customizer-options.php:41
-msgid "Header Background Color"
+#: inc/customizer.php:38
+msgid "Search Box (Primary Menu)"
 msgstr ""
 
-#: inc/customizer-options.php:50
-msgid "Header Background Image"
+#: inc/customizer.php:54
+msgid "Search Box (Secondary Menu)"
 msgstr ""
 
-#: inc/customizer-options.php:64
-msgid "Background Image Style"
-msgstr ""
-
-#: inc/customizer-options.php:77 inc/customizer-options.php:83
-msgid "Logo"
-msgstr ""
-
-#: inc/customizer-options.php:94
-msgid "Navigation Styles"
-msgstr ""
-
-#: inc/customizer-options.php:101 inc/customizer-options.php:111
-msgid "Search Box (%s)"
-msgstr ""
-
-#: inc/customizer-options.php:123
-msgid "Colors"
-msgstr ""
-
-#: inc/customizer-options.php:129
-msgid "Site Title Color"
-msgstr ""
-
-#: inc/customizer-options.php:137
-msgid "Site Title Hover Color"
-msgstr ""
-
-#: inc/customizer-options.php:145
-msgid "Site Tagline Color"
-msgstr ""
-
-#: inc/customizer-options.php:156
+#: inc/customizer.php:63
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer-options.php:167
+#: inc/customizer.php:75 inc/customizer.php:89 inc/customizer.php:237
 msgid "Standard Layout"
 msgstr ""
 
-#: inc/customizer-options.php:183
-msgid "Archive Layout"
-msgstr ""
-
-#: inc/customizer-options.php:192
+#: inc/customizer.php:102
 msgid "Display Sidebar on Archives"
 msgstr ""
 
-#: inc/customizer-options.php:203
-msgid "Typography"
-msgstr ""
-
-#: inc/customizer-options.php:209
-msgid "Site Title Font"
-msgstr ""
-
-#: inc/customizer-options.php:218
-msgid "Primary Font"
-msgstr ""
-
-#: inc/customizer-options.php:227
-msgid "Secondary Font"
-msgstr ""
-
-#: inc/customizer-options.php:239
+#: inc/customizer.php:109
 msgid "Archive"
 msgstr ""
 
-#: inc/customizer-options.php:245
+#: inc/customizer.php:120
 msgid "Display Excerpts"
 msgstr ""
 
-#: inc/customizer-options.php:246
+#: inc/customizer.php:121
 msgid "Always display excerpts instead of full content."
 msgstr ""
 
-#: inc/customizer-options.php:254 inc/customizer-options.php:279
+#: inc/customizer.php:133 inc/customizer.php:163
 msgid "Display Featured Images"
 msgstr ""
 
-#: inc/customizer-options.php:265
+#: inc/customizer.php:140
 msgid "Post"
 msgstr ""
 
-#: inc/customizer-options.php:271
+#: inc/customizer.php:151
 msgid "Display Post Dates"
 msgstr ""
 
-#: inc/customizer-options.php:296
+#: inc/customizer.php:170 inc/customizer.php:180
 msgid "Footer Text"
 msgstr ""
 
-#: inc/extras.php:40
-msgid "Page %s"
+#: inc/customizer.php:230
+msgid "Sidebar Right"
 msgstr ""
 
-#: inc/extras.php:93
-msgid "Name"
+#: inc/customizer.php:231
+msgid "Sidebar Left"
 msgstr ""
 
-#: inc/extras.php:94
-msgid "Name *"
+#: inc/customizer.php:238
+msgid "2 Column Masonry"
 msgstr ""
 
-#: inc/extras.php:100
-msgid "Email"
+#: inc/customizer.php:239
+msgid "3 Column Masonry"
 msgstr ""
 
-#: inc/extras.php:101
-msgid "Email *"
-msgstr ""
-
-#: inc/extras.php:107 inc/extras.php:108
-msgid "Website"
-msgstr ""
-
-#: inc/extras.php:126
-msgid "Comment *"
+#: inc/customizer.php:240
+msgid "4 Column Masonry"
 msgstr ""
 
 #: inc/mods.php:15
@@ -325,7 +221,7 @@ msgstr ""
 msgid "%1$s by %2$s."
 msgstr ""
 
-#: inc/mods.php:141
+#: inc/mods.php:136
 msgid "Search"
 msgstr ""
 
@@ -401,31 +297,24 @@ msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: comment.php:48
-msgctxt "1: date, 2: time"
-msgid "%1$s at %2$s"
-msgstr ""
-
-#: comments.php:28
+#: comments.php:29
 msgctxt "comments title"
-msgid "1 Response"
-msgid_plural "%1$s Responses"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/customizer-library/extensions/fonts.php:184
-msgctxt "font style"
-msgid "Serif"
+#: functions.php:140
+#. Translators: If there are characters in your language that are not
+#. * supported by Roboto, translate this to 'off'. Do not translate
+#. * into your own language.
+msgctxt "Roboto font: active or inactive"
+msgid "active"
 msgstr ""
 
-#: inc/customizer-library/extensions/fonts.php:188
-msgctxt "font style"
-msgid "Sans Serif"
-msgstr ""
-
-#: inc/customizer-library/extensions/fonts.php:192
-msgctxt "font style"
-msgid "Monospaced"
+#: functions.php:141
+msgctxt "Merriweather font: active or inactive"
+msgid "active"
 msgstr ""
 
 #: inc/template-tags.php:55
