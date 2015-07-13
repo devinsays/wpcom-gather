@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying comments.
+ * The template for displaying Comments.
  *
  * The area of the page that contains both current comments
  * and the comment form.
@@ -44,6 +44,7 @@ if ( post_password_required() ) {
 					'style' => 'ol',
 					'short_ping' => true,
 					'avatar_size' => 50,
+					'callback' => 'gather_comment_callback',
 					'short_ping' => true,
 				) );
 			?>

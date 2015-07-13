@@ -29,6 +29,17 @@ function gather_setup_author() {
 add_action( 'wp', 'gather_setup_author' );
 
 /**
+ * Use a template for individual comment output
+ *
+ * @param object $comment Comment to display.
+ * @param int    $depth   Depth of comment.
+ * @param array  $args    An array of arguments.
+ */
+function gather_comment_callback( $comment, $args, $depth ) {
+	include( locate_template( 'comment.php' ) );
+}
+
+/**
  * Returns class to be used for footer
  *
  * @return string footer class
