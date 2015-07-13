@@ -40,19 +40,19 @@ msgstr ""
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: comments.php:38 comments.php:59
+#: comments.php:38 comments.php:61
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:41 comments.php:62
+#: comments.php:41 comments.php:64
 msgid "Older Comments"
 msgstr ""
 
-#: comments.php:42 comments.php:63
+#: comments.php:42 comments.php:65
 msgid "Newer Comments"
 msgstr ""
 
-#: comments.php:75
+#: comments.php:77
 msgid "Comments are closed."
 msgstr ""
 
@@ -229,10 +229,8 @@ msgstr ""
 #. Description of the plugin/theme
 msgid ""
 "Gather is a highly adaptable theme for displaying products, art, and "
-"content.  Choose your own fonts, update colors, or upload a logo using the "
-"theme customizer.  Multiple menu locations, social icons, and widget areas "
-"are available.  Integrates well with popular plugins like JetPack and Easy "
-"Digital Downloads.  Gather is responsive and looks great on all devices."
+"content. Multiple menu locations, social icons, and widget areas are "
+"available. Gather is responsive and looks great on all devices."
 msgstr ""
 
 #. Author of the plugin/theme
