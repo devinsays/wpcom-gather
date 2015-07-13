@@ -153,17 +153,6 @@ function gather_customize_controls( $wp_customize ) {
 		'type'			=> 'checkbox'
 	) );
 
-	$wp_customize->add_setting( 'footer-text', array(
-		'default'           => gather_get_default_footer_text(),
-		'sanitize_callback' => 'gather_sanitize_textarea'
-	) );
-
-	$wp_customize->add_control( 'footer-text', array(
-		'label'   => __( 'Footer Text', 'gather' ),
-		'section'  => 'theme-options',
-		'type'     => 'textarea'
-	) );
-
 }
 add_action( 'customize_register', 'gather_customize_controls' );
 

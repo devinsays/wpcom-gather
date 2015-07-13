@@ -22,11 +22,11 @@
 
 <footer id="colophon" class="site-footer" role="contentinfo">
 	<div class="col-width">
-		<?php if ( get_theme_mod( 'footer-text', gather_get_default_footer_text() ) != '' ) : ?>
 		<div class="site-info">
-			<?php echo get_theme_mod( 'footer-text', gather_get_default_footer_text() ); ?>
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'gather' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'gather' ), 'WordPress' ); ?></a>
+			<span class="sep"> | </span>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'gather' ), 'Gather', '<a href="https://devpress.com/" rel="designer">DevPress</a>' ); ?>
 		</div><!-- .site-info -->
-		<?php endif; ?>
 	</div><!-- .col-width -->
 </footer><!-- #colophon -->
 
