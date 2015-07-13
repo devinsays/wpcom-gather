@@ -40,19 +40,19 @@ msgstr ""
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: comments.php:38 comments.php:61
+#: comments.php:35 comments.php:54
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:41 comments.php:64
-msgid "Older Comments"
+#: comments.php:36 comments.php:55
+msgid "&larr; Older Comments"
 msgstr ""
 
-#: comments.php:42 comments.php:65
-msgid "Newer Comments"
+#: comments.php:37 comments.php:56
+msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: comments.php:77
+#: comments.php:66
 msgid "Comments are closed."
 msgstr ""
 
@@ -245,10 +245,10 @@ msgstr ""
 msgid "Full Width Page"
 msgstr ""
 
-#: comments.php:29
+#: comments.php:28
 msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgid "1 Response"
+msgid_plural "%1$s Responses"
 msgstr[0] ""
 msgstr[1] ""
 

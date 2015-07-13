@@ -996,7 +996,7 @@ object {
 	max-width: 11.11%;
 }
 .gallery-caption {
-	/* Required for theme review */
+	font-size: 14px;
 }
 
 /* Clearings
@@ -1056,7 +1056,7 @@ object {
 	bottom: 30px;
 }
 /* Globally hide elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .paging-navigation,
+.infinite-scroll .posts-navigation,
 .infinite-scroll.neverending .site-footer {
 	display: none;
 }
@@ -1064,6 +1064,27 @@ object {
 .infinity-end.neverending .site-footer {
 	display: block;
 }
+
+/* Social Buttons */
 .entry-content .sharedaddy {
 	padding-top:30px;
+}
+
+/* Subscribe to E-mail */
+.widget #subscribe-email input {
+	padding: 8px;
+}
+
+/* Contact Widget */
+.widget_contact_info {
+	.confit-address,
+	.confit-phone,
+	.confit-hours {
+		margin-bottom: 15px;
+	}
+}
+
+/* Video Player */
+.video-player {
+	margin-bottom: 30px;
 }
