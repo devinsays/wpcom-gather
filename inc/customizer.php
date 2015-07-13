@@ -100,7 +100,7 @@ function gather_customize_controls( $wp_customize ) {
 
 	$wp_customize->add_control( 'archive-sidebar', array(
 		'label'   => __( 'Display Sidebar on Archives', 'gather' ),
-		'section'   => 'title_tagline',
+		'section'   => 'layout',
 		'type'      => 'checkbox'
 	) );
 
@@ -225,14 +225,14 @@ function gather_get_select_choices( $id ) {
 
 	$choices = '';
 
-	if ( 'standard-layout' ) :
+	if ( 'standard-layout' == $id ) :
 		$choices = array(
 			'sidebar-right' => __( 'Sidebar Right', 'gather' ),
 			'sidebar-left' => __( 'Sidebar Left', 'gather' )
 		);
 	endif;
 
-	if ( 'archive-layout' ) :
+	if ( 'archive-layout' == $id ) :
 		$choices = array(
 			'standard' => __( 'Standard Layout', 'gather' ),
 			'column-masonry-2' => __( '2 Column Masonry', 'gather' ),
@@ -293,9 +293,9 @@ if ( ! function_exists( 'gather_sanitize_archive_layout' ) ) :
  * @return string Layout value.
  */
 function gather_sanitize_archive_layout( $value ) {
-	$color_schemes = gather_get_select_choices( 'archive-layout' );
+	$layouts = gather_get_select_choices( 'archive-layout' );
 
-	if ( ! array_key_exists( $value, $color_schemes ) ) {
+	if ( ! array_key_exists( $value, $layouts ) ) {
 		$value = 'column-masonry-3';
 	}
 
@@ -313,9 +313,9 @@ if ( ! function_exists( 'gather_sanitize_standard_layout' ) ) :
  * @return string Layout value.
  */
 function gather_sanitize_standard_layout( $value ) {
-	$color_schemes = gather_get_select_choices( 'standard-layout' );
+	$layouts = gather_get_select_choices( 'standard-layout' );
 
-	if ( ! array_key_exists( $value, $color_schemes ) ) {
+	if ( ! array_key_exists( $value, $layouts ) ) {
 		$value = 'sidebar-right';
 	}
 

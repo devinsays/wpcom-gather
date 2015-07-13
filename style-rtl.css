@@ -1831,6 +1831,11 @@ object {
   text-decoration: underline;
 }
 
+#infinite-handle button {
+  border-radius: none;
+  box-shadow: none;
+}
+
 .infinite-loader {
   position: absolute;
   right: 50%;

@@ -8,17 +8,19 @@
 /**
  * Get default footer text
  *
+ * @since Gather 1.0.0
+ *
  * @return string $text
  */
 function gather_get_default_footer_text() {
 	$text = sprintf(
-		__( 'Powered by %s', 'gather' ),
+		__( 'Proudly powered by %s', 'gather' ),
 		'<a href="' . esc_url( __( 'http://wordpress.org/', 'gather' ) ) . '">WordPress</a>'
 	);
 	$text .= '<span class="sep"> | </span>';
 	$text .= sprintf(
-		__( '%1$s by %2$s.', 'gather' ),
-			'Gather Theme',
+		__( 'Theme: %1$s by %2$s.', 'gather' ),
+			'Gather',
 			'<a href="http://devpress.com/" rel="designer">DevPress</a>'
 	);
 	return $text;
@@ -27,7 +29,7 @@ function gather_get_default_footer_text() {
 /**
  * Adds custom classes to the array of body classes.
  *
- * @since Gather 0.1
+ * @since Gather 1.0.0
  */
 function gather_body_classes( $classes ) {
 
@@ -56,7 +58,7 @@ add_filter( 'body_class', 'gather_body_classes' );
 /**
  * Conditional logic for displaying sidebar
  *
- * @since Gather 0.1
+ * @since Gather 1.0.0
  */
  function gather_show_sidebar() {
 
@@ -81,15 +83,11 @@ add_filter( 'body_class', 'gather_body_classes' );
 /**
  * Conditional logic for loading masonry script
  *
- * @since Gather 0.1
+ * @since Gather 1.0.0
  */
  function gather_load_masonry() {
 
  	if ( !is_singular() && !is_404() ) {
-	 	// Support for bbPress
-	 	if ( is_post_type_archive( 'forum' ) ) {
-		 	return false;
-	 	}
  		$archive_layout = get_theme_mod( 'archive-layout', 'column-masonry-3' );
  		if ( $archive_layout != 'standard' ) {
  			return true;
@@ -102,7 +100,7 @@ add_filter( 'body_class', 'gather_body_classes' );
 /**
  * Outputs the number of masonry columns as a data attribute
  *
- * @since Gather 0.1
+ * @since Gather 1.0.0
  */
  function gather_get_columns() {
 	 $layout = get_theme_mod( 'archive-layout', 'column-masonry-3' );
@@ -121,7 +119,7 @@ add_filter( 'body_class', 'gather_body_classes' );
 /**
  * Outputs search icon in menu based on customizer option
  *
- * @since Gather 0.1
+ * @since Gather 1.0.0
  */
 function gather_search_in_menu( $items, $args ) {
 
@@ -146,7 +144,11 @@ add_filter( 'wp_nav_menu_items', 'gather_search_in_menu', 10, 2 );
 /**
  * Append class "social" to specific off-site links
  *
- * @since Gather 0.1
+ * @since Gather 1.0.0
+ *
+ * @param array $classes
+ * @param object $item
+ * @returns array $classes
  */
 function gather_social_nav_class( $classes, $item ) {
 
@@ -160,7 +162,6 @@ function gather_social_nav_class( $classes, $item ) {
 
     	$base = str_replace( "www.", "", $url['host'] );
 
-    	// @TODO Make this filterable
     	$social = array(
     		'behance.com',
     		'dribbble.com',

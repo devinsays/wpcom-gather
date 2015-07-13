@@ -1032,6 +1032,10 @@ object {
 #infinite-handle span:hover {
 	text-decoration: underline;
 }
+#infinite-handle button {
+	border-radius: none;
+	box-shadow: none;
+}
 .infinite-loader {
 	position: absolute;
 	left: 50%;

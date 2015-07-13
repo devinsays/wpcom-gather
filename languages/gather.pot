@@ -213,19 +213,19 @@ msgstr ""
 msgid "4 Column Masonry"
 msgstr ""
 
-#: inc/mods.php:15
-msgid "Powered by %s"
+#: inc/mods.php:17
+msgid "Proudly powered by %s"
 msgstr ""
 
-#: inc/mods.php:16
+#: inc/mods.php:18
 msgid "http://wordpress.org/"
 msgstr ""
 
-#: inc/mods.php:20
-msgid "%1$s by %2$s."
+#: inc/mods.php:22
+msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: inc/mods.php:136
+#: inc/mods.php:134
 msgid "Search"
 msgstr ""
 

@@ -92,12 +92,8 @@ function gather_get_menu_name( $location ) {
  */
 function gather_template_part() {
 	$template = '';
-	$type = get_post_type();
 	if ( gather_load_masonry() ) {
 		$template = 'masonry';
-	}
-	if ( 'download' == $type && gather_load_masonry() ) {
-		$template = 'masonry-download';
 	}
 	return $template;
 }
