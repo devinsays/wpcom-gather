@@ -250,7 +250,7 @@ msgid "Full Width Page"
 msgstr ""
 
 #: comment.php:48
-msgctxt "1: date, 2: time"
+msgctxt "gather"
 msgid "%1$s at %2$s"
 msgstr ""
 

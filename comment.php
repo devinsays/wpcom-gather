@@ -45,7 +45,7 @@ if ( $post ) {
 			<span class="comment-time">
 			<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID, $args ) ); ?>">
 				<time datetime="<?php comment_time( 'c' ); ?>">
-					<?php printf( _x( '%1$s at %2$s', '1: date, 2: time' ), get_comment_date(), get_comment_time() ); ?>
+					<?php printf( _x( '%1$s at %2$s', 'gather', '1: date, 2: time' ), get_comment_date(), get_comment_time() ); ?>
 				</time>
 			</a>
 			</span>
