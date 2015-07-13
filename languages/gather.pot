@@ -40,19 +40,27 @@ msgstr ""
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: comments.php:35 comments.php:54
+#: comment.php:31
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: comment.php:52 content-page.php:24 inc/template-tags.php:65
+msgid "Edit"
+msgstr ""
+
+#: comments.php:35 comments.php:55
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:36 comments.php:55
+#: comments.php:36 comments.php:56
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: comments.php:37 comments.php:56
+#: comments.php:37 comments.php:57
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: comments.php:66
+#: comments.php:67
 msgid "Comments are closed."
 msgstr ""
 
@@ -87,10 +95,6 @@ msgstr ""
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr ""
-
-#: content-page.php:24 inc/template-tags.php:65
-msgid "Edit"
 msgstr ""
 
 #: content-single.php:41
@@ -243,6 +247,11 @@ msgstr ""
 
 #. Template Name of the plugin/theme
 msgid "Full Width Page"
+msgstr ""
+
+#: comment.php:48
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
 msgstr ""
 
 #: comments.php:28
