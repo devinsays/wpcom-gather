@@ -101,11 +101,7 @@ if ( ! function_exists( 'gather_post_meta' ) ) :
 function gather_post_meta( $type = 'post' ) {
 
 	/* translators: used between list items, there is a space after the comma */
-	if ( 'download' == $type) {
-		$category_list =  get_the_term_list( get_the_ID(), 'download_category', '', ', ', '' );
-	} else {
-		$category_list = get_the_category_list( __( ', ', 'gather' ) );
-	}
+	$category_list = get_the_category_list( __( ', ', 'gather' ) );
 
 	if ( $category_list ) {
 		echo '<span class="category-meta meta-group">';
@@ -114,11 +110,7 @@ function gather_post_meta( $type = 'post' ) {
 	}
 
 	/* translators: used between list items, there is a space after the comma */
-	if ( 'download' == $type) {
-		$tag_list =  get_the_term_list( get_the_ID(), 'download_tag', '', ', ', '' );
-	} else {
-		$tag_list = get_the_tag_list( '', __( ', ', 'gather' ) );
-	}
+	$tag_list = get_the_tag_list( '', __( ', ', 'gather' ) );
 
 	if ( $tag_list ) {
 		echo '<span class="tag-meta meta-group">';

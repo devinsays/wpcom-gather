@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Gather 0.9.1\n"
+"Project-Id-Version: Gather 1.0.0\n"
 "Report-Msgid-Bugs-To: https://devpress.com/\n"
 "POT-Creation-Date: 2014-08-11 22:46:59+00:00\n"
 "MIME-Version: 1.0\n"
@@ -68,25 +68,17 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: content-masonry-download.php:19
-msgid "Free"
+#: content-masonry.php:27 content.php:30
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: content-masonry-download.php:35
-msgid "View More <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: content-masonry-download.php:39 content-masonry.php:31 content-page.php:18
-#: content-single.php:27 content.php:34
+#: content-masonry.php:31 content-page.php:18 content-single.php:27
+#: content.php:34
 msgid "Pages:"
 msgstr ""
 
-#: content-masonry-download.php:46 content-masonry.php:38
+#: content-masonry.php:38
 msgid "View More"
-msgstr ""
-
-#: content-masonry.php:27 content.php:30
-msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: content-none.php:14
@@ -109,7 +101,7 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: content-page.php:24 inc/template-tags.php:129
+#: content-page.php:24 inc/template-tags.php:121
 msgid "Edit"
 msgstr ""
 
@@ -137,79 +129,75 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/customizer.php:23
+#: inc/customizer.php:17
+msgid "Theme Options"
+msgstr ""
+
+#: inc/customizer.php:29
 msgid "Center Header Text/Logo"
 msgstr ""
 
-#: inc/customizer.php:38
-msgid "Search Box (Primary Menu)"
+#: inc/customizer.php:44
+msgid "Show Search Icon (Primary Menu)"
 msgstr ""
 
-#: inc/customizer.php:54
-msgid "Search Box (Secondary Menu)"
+#: inc/customizer.php:60
+msgid "Show Search Icon (Secondary Menu)"
 msgstr ""
 
-#: inc/customizer.php:63
-msgid "Layout"
-msgstr ""
-
-#: inc/customizer.php:75 inc/customizer.php:237
+#: inc/customizer.php:75 inc/customizer.php:219
 msgid "Standard Layout"
 msgstr ""
 
-#: inc/customizer.php:89
-msgid "Archive Layout"
-msgstr ""
-
-#: inc/customizer.php:102
-msgid "Display Sidebar on Archives"
-msgstr ""
-
-#: inc/customizer.php:109
-msgid "Archive"
-msgstr ""
-
-#: inc/customizer.php:120
-msgid "Display Excerpts"
-msgstr ""
-
-#: inc/customizer.php:121
-msgid "Always display excerpts instead of full content."
-msgstr ""
-
-#: inc/customizer.php:133 inc/customizer.php:163
-msgid "Display Featured Images"
-msgstr ""
-
-#: inc/customizer.php:140
-msgid "Post"
-msgstr ""
-
-#: inc/customizer.php:151
+#: inc/customizer.php:88
 msgid "Display Post Dates"
 msgstr ""
 
-#: inc/customizer.php:170 inc/customizer.php:180
+#: inc/customizer.php:100
+msgid "Display Featured Images on Posts"
+msgstr ""
+
+#: inc/customizer.php:113
+msgid "Archive Layout"
+msgstr ""
+
+#: inc/customizer.php:126
+msgid "Display Sidebar on Archives"
+msgstr ""
+
+#: inc/customizer.php:138
+msgid "Display Excerpts on Archives"
+msgstr ""
+
+#: inc/customizer.php:139
+msgid "Always display excerpts instead of full content."
+msgstr ""
+
+#: inc/customizer.php:151
+msgid "Display Featured Images on Archives"
+msgstr ""
+
+#: inc/customizer.php:162
 msgid "Footer Text"
 msgstr ""
 
-#: inc/customizer.php:230
+#: inc/customizer.php:212
 msgid "Sidebar Right"
 msgstr ""
 
-#: inc/customizer.php:231
+#: inc/customizer.php:213
 msgid "Sidebar Left"
 msgstr ""
 
-#: inc/customizer.php:238
+#: inc/customizer.php:220
 msgid "2 Column Masonry"
 msgstr ""
 
-#: inc/customizer.php:239
+#: inc/customizer.php:221
 msgid "3 Column Masonry"
 msgstr ""
 
-#: inc/customizer.php:240
+#: inc/customizer.php:222
 msgid "4 Column Masonry"
 msgstr ""
 
@@ -218,7 +206,7 @@ msgid "Proudly powered by %s"
 msgstr ""
 
 #: inc/mods.php:18
-msgid "http://wordpress.org/"
+msgid "https://wordpress.org/"
 msgstr ""
 
 #: inc/mods.php:22
@@ -245,7 +233,7 @@ msgstr ""
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:107 inc/template-tags.php:120
+#: inc/template-tags.php:104 inc/template-tags.php:113
 #. translators: used between list items, there is a space after the comma
 msgid ", "
 msgstr ""

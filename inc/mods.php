@@ -15,13 +15,13 @@
 function gather_get_default_footer_text() {
 	$text = sprintf(
 		__( 'Proudly powered by %s', 'gather' ),
-		'<a href="' . esc_url( __( 'http://wordpress.org/', 'gather' ) ) . '">WordPress</a>'
+		'<a href="' . esc_url( __( 'https://wordpress.org/', 'gather' ) ) . '">WordPress</a>'
 	);
 	$text .= '<span class="sep"> | </span>';
 	$text .= sprintf(
 		__( 'Theme: %1$s by %2$s.', 'gather' ),
 			'Gather',
-			'<a href="http://devpress.com/" rel="designer">DevPress</a>'
+			'<a href="https://devpress.com/" rel="designer">DevPress</a>'
 	);
 	return $text;
 }

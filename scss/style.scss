@@ -4,7 +4,7 @@ Theme URI: https://devpress.com/gather
 Author: DevPress
 Author URI: https://devpress.com
 Description: Gather is a highly adaptable theme for displaying products, art, and content.  Choose your own fonts, update colors, or upload a logo using the theme customizer.  Multiple menu locations, social icons, and widget areas are available.  Integrates well with popular plugins like JetPack and Easy Digital Downloads.  Gather is responsive and looks great on all devices.
-Version: 0.9.1
+Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: gather
@@ -253,6 +253,7 @@ a:active {
 --------------------------------------------------------------*/
 
 .sticky {
+	/* Required for theme review */
 }
 .entry-header {
 	padding:4% 8%;
@@ -643,6 +644,7 @@ a:active {
 	word-wrap: break-word;
 }
 .bypostauthor {
+	/* Required for theme review */
 }
 .comment-list {
 	margin:0;
@@ -983,7 +985,9 @@ object {
 .gallery-columns-9 .gallery-item {
 	max-width: 11.11%;
 }
-.gallery-caption {}
+.gallery-caption {
+	/* Required for theme review */
+}
 
 /* Clearings
 --------------------------------------------------------------*/
