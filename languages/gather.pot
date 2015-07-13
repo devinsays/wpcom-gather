@@ -32,26 +32,6 @@ msgstr ""
 msgid "The page you are looking for doesn't exist. Try a search?"
 msgstr ""
 
-#: archive.php:23
-msgid "Author: %s"
-msgstr ""
-
-#: archive.php:26
-msgid "Day: %s"
-msgstr ""
-
-#: archive.php:29
-msgid "Month: %s"
-msgstr ""
-
-#: archive.php:32
-msgid "Year: %s"
-msgstr ""
-
-#: archive.php:35
-msgid "Archives"
-msgstr ""
-
 #: comments.php:38 comments.php:59
 msgid "Comment navigation"
 msgstr ""
@@ -109,6 +89,18 @@ msgstr ""
 msgid "About %s"
 msgstr ""
 
+#: footer.php:26
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: footer.php:26
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: footer.php:28
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
 #: functions.php:44
 msgid "Primary Menu"
 msgstr ""
@@ -145,7 +137,7 @@ msgstr ""
 msgid "Show Search Icon (Secondary Menu)"
 msgstr ""
 
-#: inc/customizer.php:75 inc/customizer.php:219
+#: inc/customizer.php:75 inc/customizer.php:208
 msgid "Standard Layout"
 msgstr ""
 
@@ -177,43 +169,27 @@ msgstr ""
 msgid "Display Featured Images on Archives"
 msgstr ""
 
-#: inc/customizer.php:162
-msgid "Footer Text"
-msgstr ""
-
-#: inc/customizer.php:212
+#: inc/customizer.php:201
 msgid "Sidebar Right"
 msgstr ""
 
-#: inc/customizer.php:213
+#: inc/customizer.php:202
 msgid "Sidebar Left"
 msgstr ""
 
-#: inc/customizer.php:220
+#: inc/customizer.php:209
 msgid "2 Column Masonry"
 msgstr ""
 
-#: inc/customizer.php:221
+#: inc/customizer.php:210
 msgid "3 Column Masonry"
 msgstr ""
 
-#: inc/customizer.php:222
+#: inc/customizer.php:211
 msgid "4 Column Masonry"
 msgstr ""
 
-#: inc/mods.php:17
-msgid "Proudly powered by %s"
-msgstr ""
-
-#: inc/mods.php:18
-msgid "https://wordpress.org/"
-msgstr ""
-
-#: inc/mods.php:22
-msgid "Theme: %1$s by %2$s."
-msgstr ""
-
-#: inc/mods.php:134
+#: inc/mods.php:117
 msgid "Search"
 msgstr ""
 
@@ -277,16 +253,6 @@ msgstr ""
 
 #. Template Name of the plugin/theme
 msgid "Full Width Page"
-msgstr ""
-
-#: archive.php:29
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr ""
-
-#: archive.php:32
-msgctxt "yearly archives date format"
-msgid "Y"
 msgstr ""
 
 #: comments.php:29

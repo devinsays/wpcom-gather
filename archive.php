@@ -9,36 +9,12 @@
 
 get_header(); ?>
 
-	<?php if ( is_category() || is_tag() || is_author() || is_day() || is_year() ) : ?>
 	<header class="page-header">
-		<h1 class="page-title">
 		<?php
-		if ( is_category() ) :
-			single_cat_title();
-
-		elseif ( is_tag() ) :
-			single_tag_title();
-
-		elseif ( is_author() ) :
-			printf( __( 'Author: %s', 'gather' ), '<span class="vcard">' . get_the_author() . '</span>' );
-
-		elseif ( is_day() ) :
-			printf( __( 'Day: %s', 'gather' ), '<span>' . get_the_date() . '</span>' );
-
-		elseif ( is_month() ) :
-			printf( __( 'Month: %s', 'gather' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'gather' ) ) . '</span>' );
-
-		elseif ( is_year() ) :
-			printf( __( 'Year: %s', 'gather' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'gather' ) ) . '</span>' );
-
-		else :
-			_e( 'Archives', 'gather' );
-
-		endif;
+			the_archive_title( '<h1 class="page-title">', '</h1>' );
+			the_archive_description( '<div class="taxonomy-description">', '</div>' );
 		?>
-		</h1>
 	</header><!-- .page-header -->
-	<?php endif; ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
