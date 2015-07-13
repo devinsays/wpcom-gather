@@ -22,7 +22,10 @@ get_header(); ?>
 					endif;
 				?>
 
-				<?php gather_post_nav(); ?>
+				<?php the_post_navigation( array(
+					'prev_text' => _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'gather' ),
+					'next_text' => _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link', 'gather' )
+				) ); ?>
 
 			<?php endwhile; // end of the loop. ?>
 		</div>
