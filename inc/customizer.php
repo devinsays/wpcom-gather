@@ -12,6 +12,12 @@
  */
 function gather_customize_controls( $wp_customize ) {
 
+	// Layout Settings
+	$wp_customize->add_section( 'theme-options' , array(
+		'title' => __( 'Theme Options', 'gather' ),
+		'priority'   => 70,
+	) );
+
 	// Header Settings
 	$wp_customize->add_setting( 'center-branding', array(
 		'default'    =>  0,
@@ -21,7 +27,7 @@ function gather_customize_controls( $wp_customize ) {
 
 	$wp_customize->add_control( 'center-branding', array(
 		'label'   => __( 'Center Header Text/Logo', 'gather' ),
-		'section'   => 'title_tagline',
+		'section'   => 'theme-options',
 		'type'      => 'checkbox'
 	) );
 
@@ -35,8 +41,8 @@ function gather_customize_controls( $wp_customize ) {
 		) );
 
 		$wp_customize->add_control( 'primary-menu-search', array(
-			'label'   => __( 'Search Box (Primary Menu)', 'gather' ),
-			'section'   => 'nav',
+			'label'   => __( 'Show Search Icon (Primary Menu)', 'gather' ),
+			'section'   => 'theme-options',
 			'type'      => 'checkbox'
 		) );
 
@@ -51,18 +57,12 @@ function gather_customize_controls( $wp_customize ) {
 		) );
 
 		$wp_customize->add_control( 'secondary-menu-search', array(
-			'label'   => __( 'Search Box (Secondary Menu)', 'gather' ),
-			'section'   => 'nav',
+			'label'   => __( 'Show Search Icon (Secondary Menu)', 'gather' ),
+			'section'   => 'theme-options',
 			'type'      => 'checkbox'
 		) );
 
 	endif;
-
-	// Layout Settings
-	$wp_customize->add_section( 'layout' , array(
-		'title' => __( 'Layout', 'gather' ),
-		'priority'   => 70,
-	) );
 
 	$wp_customize->add_setting( 'standard-layout', array(
 		'default'    =>  1,
@@ -73,9 +73,33 @@ function gather_customize_controls( $wp_customize ) {
 
 	$wp_customize->add_control( 'standard-layout', array(
 		'label'   => __( 'Standard Layout', 'gather' ),
-		'section'   => 'layout',
+		'section'   => 'theme-options',
 		'type'      => 'select',
 		'choices'	=> gather_get_select_choices( 'standard-layout' )
+	) );
+
+	$wp_customize->add_setting( 'display-post-dates', array(
+		'default'    =>  1,
+		'transport'  =>  'refresh',
+		'sanitize_callback' => 'gather_sanitize_checkbox'
+	) );
+
+	$wp_customize->add_control( 'display-post-dates', array(
+		'label'   => __( 'Display Post Dates', 'gather' ),
+		'section'		=> 'theme-options',
+		'type'			=> 'checkbox'
+	) );
+
+	$wp_customize->add_setting( 'post-featured-images', array(
+		'default'    =>  1,
+		'transport'  =>  'refresh',
+		'sanitize_callback' => 'gather_sanitize_checkbox'
+	) );
+
+	$wp_customize->add_control( 'post-featured-images', array(
+		'label'			=> __( 'Display Featured Images on Posts', 'gather' ),
+		'section'		=> 'theme-options',
+		'type'			=> 'checkbox'
 	) );
 
 	$wp_customize->add_setting( 'archive-layout', array(
@@ -87,7 +111,7 @@ function gather_customize_controls( $wp_customize ) {
 
 	$wp_customize->add_control( 'archive-layout', array(
 		'label'   => __( 'Archive Layout', 'gather' ),
-		'section'   => 'layout',
+		'section'   => 'theme-options',
 		'type'      => 'select',
 		'choices'	=> gather_get_select_choices( 'archive-layout' )
 	) );
@@ -100,14 +124,8 @@ function gather_customize_controls( $wp_customize ) {
 
 	$wp_customize->add_control( 'archive-sidebar', array(
 		'label'   => __( 'Display Sidebar on Archives', 'gather' ),
-		'section'   => 'layout',
+		'section'   => 'theme-options',
 		'type'      => 'checkbox'
-	) );
-
-	// Archive Settings
-	$wp_customize->add_section( 'archive' , array(
-		'title' => __( 'Archive', 'gather' ),
-		'priority'   => 80,
 	) );
 
 	$wp_customize->add_setting( 'archive-excerpts', array(
@@ -117,9 +135,9 @@ function gather_customize_controls( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'archive-excerpts', array(
-		'label'			=> __( 'Display Excerpts', 'gather' ),
+		'label'			=> __( 'Display Excerpts on Archives', 'gather' ),
 		'description'	=> __( 'Always display excerpts instead of full content.', 'gather' ),
-		'section'		=> 'archive',
+		'section'		=> 'theme-options',
 		'type'			=> 'checkbox'
 	) );
 
@@ -130,45 +148,9 @@ function gather_customize_controls( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'archive-featured-images', array(
-		'label'			=> __( 'Display Featured Images', 'gather' ),
-		'section'		=> 'archive',
+		'label'			=> __( 'Display Featured Images on Archives', 'gather' ),
+		'section'		=> 'theme-options',
 		'type'			=> 'checkbox'
-	) );
-
-	// Post Settings
-	$wp_customize->add_section( 'post' , array(
-		'title' => __( 'Post', 'gather' ),
-		'priority'   => 80,
-	) );
-
-	$wp_customize->add_setting( 'display-post-dates', array(
-		'default'    =>  1,
-		'transport'  =>  'refresh',
-		'sanitize_callback' => 'gather_sanitize_checkbox'
-	) );
-
-	$wp_customize->add_control( 'display-post-dates', array(
-		'label'   => __( 'Display Post Dates', 'gather' ),
-		'section'		=> 'post',
-		'type'			=> 'checkbox'
-	) );
-
-	$wp_customize->add_setting( 'post-featured-images', array(
-		'default'    =>  1,
-		'transport'  =>  'refresh',
-		'sanitize_callback' => 'gather_sanitize_checkbox'
-	) );
-
-	$wp_customize->add_control( 'post-featured-images', array(
-		'label'			=> __( 'Display Featured Images', 'gather' ),
-		'section'		=> 'post',
-		'type'			=> 'checkbox'
-	) );
-
-	// Footer Settings
-	$wp_customize->add_section( 'footer' , array(
-		'title'      => __( 'Footer Text', 'luminate' ),
-		'priority'   => 100,
 	) );
 
 	$wp_customize->add_setting( 'footer-text', array(
@@ -178,7 +160,7 @@ function gather_customize_controls( $wp_customize ) {
 
 	$wp_customize->add_control( 'footer-text', array(
 		'label'   => __( 'Footer Text', 'gather' ),
-		'section'  => 'footer',
+		'section'  => 'theme-options',
 		'type'     => 'textarea'
 	) );
 
