@@ -128,19 +128,6 @@ function gather_customize_controls( $wp_customize ) {
 		'type'      => 'checkbox'
 	) );
 
-	$wp_customize->add_setting( 'archive-excerpts', array(
-		'default'    =>  0,
-		'transport'  =>  'refresh',
-		'sanitize_callback' => 'gather_sanitize_checkbox'
-	) );
-
-	$wp_customize->add_control( 'archive-excerpts', array(
-		'label'			=> __( 'Display Excerpts on Archives', 'gather' ),
-		'description'	=> __( 'Always display excerpts instead of full content.', 'gather' ),
-		'section'		=> 'theme-options',
-		'type'			=> 'checkbox'
-	) );
-
 	$wp_customize->add_setting( 'archive-featured-images', array(
 		'default'    =>  1,
 		'transport'  =>  'refresh',

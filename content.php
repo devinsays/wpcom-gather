@@ -24,11 +24,7 @@
 	<?php } ?>
 
 	<div class="entry-content clearfix">
-	<?php if ( get_theme_mod( 'archive-excerpts', 0 ) || has_excerpt() ) :
-		the_excerpt();
-	else :
-		the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'gather' ) );
-	endif; ?>
+		<?php the_excerpt(); ?>
 	<?php
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . __( 'Pages:', 'gather' ),
