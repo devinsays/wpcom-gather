@@ -102,7 +102,7 @@ function gather_widgets_init() {
 
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'gather' ),
-		'id'            => 'primary',
+		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget module %2$s">',
 		'after_widget'  => '</aside>',
