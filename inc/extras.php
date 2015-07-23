@@ -90,6 +90,11 @@ function gather_count_widgets( $sidebar_id ) {
  */
 function gather_get_menu_name( $location ) {
 
+	// If fallback_cb is used, return default name
+	if ( 'secondary' == $location && ! has_nav_menu( 'secondary' ) ) {
+		return __( 'Menu', 'gather' );
+	}
+
     $locations = get_nav_menu_locations();
     $menu_obj = get_term( $locations[$location], 'nav_menu' );
 

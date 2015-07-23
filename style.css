@@ -646,6 +646,18 @@ a:active {
   border-top: 1px solid #a5dcc0;
 }
 
+.fallback-menu ul {
+  display: block;
+}
+
+.fallback-menu ul ul {
+  display: none;
+}
+
+.fallback-menu .menu {
+  display: none;
+}
+
 .main-navigation li {
   position: relative;
 }
@@ -782,6 +794,10 @@ a:active {
     display: none;
   }
 
+  .fallback-menu .menu {
+    display: block;
+  }
+
   .dropdown-toggle {
     width: auto;
     border: none;
@@ -807,7 +823,8 @@ a:active {
     color: #fff;
   }
 
-  .main-navigation .menu-item-has-children > a {
+  .main-navigation .menu-item-has-children > a,
+  .main-navigation .page_item_has_children > a {
     padding-right: 30px;
   }
 
@@ -1599,11 +1616,11 @@ a:active {
   font-size: 14px;
   padding: 20px 0;
   background: #333;
-  color: #666666;
+  color: #666;
 }
 
 #colophon a {
-  color: #999999;
+  color: #999;
 }
 
 @media screen and (min-width: 510px) and (max-width: 880px) {

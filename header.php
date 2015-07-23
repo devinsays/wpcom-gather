@@ -24,18 +24,18 @@
 	<header id="masthead" class="site-header" role="banner">
 
 		<?php if ( has_nav_menu( 'primary' ) ) : ?>
-		<nav id="primary-navigation" class="main-navigation clearfix" role="navigation">
-			<div class="col-width">
-				<div class="menu-toggle" data-toggle="#primary-navigation .menu">
-					<?php echo esc_html( gather_get_menu_name( 'primary' ) ); ?>
+			<nav id="primary-navigation" class="main-navigation clearfix" role="navigation">
+				<div class="col-width">
+					<div class="menu-toggle" data-toggle="#primary-navigation .menu">
+						<?php echo esc_html( gather_get_menu_name( 'primary' ) ); ?>
+					</div>
+					<?php wp_nav_menu( array(
+						'theme_location' => 'primary',
+						'link_before' => '<span>',
+						'link_after' => '</span>'
+					) ); ?>
 				</div>
-				<?php wp_nav_menu( array(
-					'theme_location' => 'primary',
-					'link_before' => '<span>',
-					'link_after' => '</span>'
-				) ); ?>
-			</div>
-		</nav>
+			</nav>
 		<?php endif; ?>
 
 		<div class="site-branding">
@@ -58,19 +58,26 @@
 			</div>
 		</div>
 
-		<?php if ( has_nav_menu( 'secondary' ) ) : ?>
-		<nav id="secondary-navigation" class="main-navigation clearfix" role="navigation">
-			<div class="col-width">
-				<div class="menu-toggle" data-toggle="#secondary-navigation .menu">
-					<?php echo esc_html( gather_get_menu_name( 'secondary' ) ); ?>
+		<?php if ( has_nav_menu( 'secondary' ) || ! has_nav_menu( 'primary' ) ) :
+			// For fallback menu styles
+			$class = 'main-navigation clearfix';
+			if ( ! has_nav_menu( 'secondary' ) ) :
+				$class = 'fallback-menu ' . $class;
+			endif;
+			?>
+			<nav id="secondary-navigation" class="<?php echo $class; ?>" role="navigation">
+				<div class="col-width">
+					<div class="menu-toggle" data-toggle="#secondary-navigation .menu">
+						<?php echo esc_html( gather_get_menu_name( 'secondary' ) ); ?>
+					</div>
+					<?php wp_nav_menu( array(
+						'theme_location' => 'secondary',
+						'link_before' => '<span>',
+						'link_after' => '</span>',
+						'fallback_cb' => 'wp_page_menu'
+					) ); ?>
 				</div>
-				<?php wp_nav_menu( array(
-					'theme_location' => 'secondary',
-					'link_before' => '<span>',
-					'link_after' => '</span>'
-				) ); ?>
-			</div>
-		</nav>
+			</nav>
 		<?php endif; ?>
 
 	</header><!-- #masthead -->
