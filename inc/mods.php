@@ -100,31 +100,6 @@ function gather_get_columns() {
 endif;
 
 /**
- * Outputs search icon in menu based on customizer option
- *
- * @since Gather 1.0.0
- */
-function gather_search_in_menu( $items, $args ) {
-
-	if (
-		( get_theme_mod( 'primary-menu-search', false ) && 'primary' == $args->theme_location ) ||
-		( get_theme_mod( 'secondary-menu-search', false ) && 'secondary' == $args->theme_location )
-	) :
-
-		$selector = '#' . $args->theme_location . '-navigation .toggle-search';
-	    $items .= '<li class="menu-item menu-search">';
-	    $items .= '<a class="toggle-search-link" href="#search" data-toggle="' . $selector . '">';
-	    $items .= '<span class="screen-reader-text">' . __( 'Search', 'gather' ) . '</span>';
-	    $items .= '</a></li>';
-	    $items .= '<div class="toggle-search">' . get_search_form( false ) . '</div>';
-
-	endif;
-
-    return $items;
-}
-add_filter( 'wp_nav_menu_items', 'gather_search_in_menu', 10, 2 );
-
-/**
  * Append class "social" to specific off-site links
  *
  * @since Gather 1.0.0

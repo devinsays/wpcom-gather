@@ -29,10 +29,6 @@
 
 			self.navigationInit();
 
-			if ( $('.toggle-search').length > 0 ) {
-				this.toggleSearch();
-			}
-
 			this.cache.$document.on( 'ready', function() {
 
 				if ( $('body').hasClass('masonry') ) {
@@ -102,22 +98,6 @@
 				});
 			});
 
-		},
-
-		/**
-		 * Initialize the search toggle in the main navigation.
-		 *
-		 * @since 1.0.0
-		 *
-		 * @return void
-		 */
-		toggleSearch: function() {
-			$('.main-navigation .menu-search a').on( 'click', function(e) {
-				e.preventDefault();
-				var toggle = $(this).data('toggle');
-				$(this).toggleClass( 'active' );
-				$(toggle).slideToggle( '200' );
-			});
 		},
 
 		// Initialize Masonry

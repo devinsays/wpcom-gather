@@ -31,39 +31,6 @@ function gather_customize_controls( $wp_customize ) {
 		'type'      => 'checkbox'
 	) );
 
-	// Navigation Settings
-	if ( has_nav_menu( 'primary' ) ):
-
-		$wp_customize->add_setting( 'primary-menu-search', array(
-			'default'    =>  0,
-			'transport'  =>  'refresh',
-			'sanitize_callback' => 'gather_sanitize_checkbox'
-		) );
-
-		$wp_customize->add_control( 'primary-menu-search', array(
-			'label'   => __( 'Show Search Icon (Primary Menu)', 'gather' ),
-			'section'   => 'theme-options',
-			'type'      => 'checkbox'
-		) );
-
-	endif;
-
-	if ( has_nav_menu( 'secondary' ) ):
-
-		$wp_customize->add_setting( 'secondary-menu-search', array(
-			'default'    =>  0,
-			'transport'  =>  'refresh',
-			'sanitize_callback' => 'gather_sanitize_checkbox'
-		) );
-
-		$wp_customize->add_control( 'secondary-menu-search', array(
-			'label'   => __( 'Show Search Icon (Secondary Menu)', 'gather' ),
-			'section'   => 'theme-options',
-			'type'      => 'checkbox'
-		) );
-
-	endif;
-
 	$wp_customize->add_setting( 'standard-layout', array(
 		'default'    =>  1,
 		'transport'  =>  'refresh',
