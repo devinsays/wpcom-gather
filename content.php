@@ -15,7 +15,7 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php if ( has_post_thumbnail() && get_theme_mod( 'archive-featured-images', 1 ) ) { ?>
+	<?php if ( has_post_thumbnail() ) { ?>
 	<figure class="entry-image">
 		<a href="<?php the_permalink() ?>" class="thumbnail">
 		<?php the_post_thumbnail(); ?>

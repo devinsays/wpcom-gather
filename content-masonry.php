@@ -6,7 +6,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'module'); ?>>
 
-	<?php if ( has_post_thumbnail() && get_theme_mod( 'archive-featured-images', 1 ) ) { ?>
+	<?php if ( has_post_thumbnail() ) { ?>
 	<div class="entry-image-section">
 		<a href="<?php the_permalink() ?>" class="entry-image-link">
 			<figure class="entry-image">
@@ -21,11 +21,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content clearfix">
-	<?php if ( is_search() || get_theme_mod( 'archive-excerpts', 0 ) || has_excerpt() ) :
-		the_excerpt();
-	else :
-		the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'gather' ) );
-	endif; ?>
+		<?php the_excerpt(); ?>
 	<?php
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . __( 'Pages:', 'gather' ),

@@ -45,30 +45,6 @@ function gather_customize_controls( $wp_customize ) {
 		'choices'	=> gather_get_select_choices( 'standard-layout' )
 	) );
 
-	$wp_customize->add_setting( 'display-post-dates', array(
-		'default'    =>  1,
-		'transport'  =>  'refresh',
-		'sanitize_callback' => 'gather_sanitize_checkbox'
-	) );
-
-	$wp_customize->add_control( 'display-post-dates', array(
-		'label'   => __( 'Display Post Dates', 'gather' ),
-		'section'		=> 'theme-options',
-		'type'			=> 'checkbox'
-	) );
-
-	$wp_customize->add_setting( 'post-featured-images', array(
-		'default'    =>  1,
-		'transport'  =>  'refresh',
-		'sanitize_callback' => 'gather_sanitize_checkbox'
-	) );
-
-	$wp_customize->add_control( 'post-featured-images', array(
-		'label'			=> __( 'Display Featured Images on Posts', 'gather' ),
-		'section'		=> 'theme-options',
-		'type'			=> 'checkbox'
-	) );
-
 	$wp_customize->add_setting( 'archive-layout', array(
 		'default'    =>  1,
 		'transport'  =>  'refresh',
@@ -93,18 +69,6 @@ function gather_customize_controls( $wp_customize ) {
 		'label'   => __( 'Display Sidebar on Archives', 'gather' ),
 		'section'   => 'theme-options',
 		'type'      => 'checkbox'
-	) );
-
-	$wp_customize->add_setting( 'archive-featured-images', array(
-		'default'    =>  1,
-		'transport'  =>  'refresh',
-		'sanitize_callback' => 'gather_sanitize_checkbox'
-	) );
-
-	$wp_customize->add_control( 'archive-featured-images', array(
-		'label'			=> __( 'Display Featured Images on Archives', 'gather' ),
-		'section'		=> 'theme-options',
-		'type'			=> 'checkbox'
 	) );
 
 }

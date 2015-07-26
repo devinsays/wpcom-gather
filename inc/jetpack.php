@@ -28,7 +28,7 @@ add_action( 'after_setup_theme', 'gather_jetpack_setup' );
  * @since Gather 1.0.0
  */
 function gather_infinite_scroll_render() {
-	while( have_posts() ) {
+	while ( have_posts() ) {
 	    the_post();
 	    get_template_part( 'content', gather_template_part() );
 	}
