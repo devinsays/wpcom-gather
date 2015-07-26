@@ -250,3 +250,6 @@ require get_template_directory() . '/inc/styles.php';
 
 // Load Jetpack compatibility file.
 require get_template_directory() . '/inc/jetpack.php';
+
+// Load WordPress.com compatibility file.
+require get_template_directory() . '/inc/wpcom.php';
