@@ -23,7 +23,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
 
-		<?php if ( has_nav_menu( 'primary' ) ) : ?>
+		<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
 			<nav id="primary-navigation" class="main-navigation clearfix" role="navigation">
 				<div class="col-width">
 					<div class="menu-toggle" data-toggle="#primary-navigation .menu">
@@ -31,6 +31,15 @@
 					</div>
 					<?php wp_nav_menu( array(
 						'theme_location' => 'primary',
+						'container_class' => 'primary-menu-wrap',
+						'menu_class' => 'primary-menu',
+						'link_before' => '<span>',
+						'link_after' => '</span>'
+					) ); ?>
+					<?php wp_nav_menu( array(
+						'theme_location' => 'social',
+						'container_class' => 'social-menu-wrap',
+						'menu_class' => 'social-menu',
 						'link_before' => '<span>',
 						'link_after' => '</span>'
 					) ); ?>
@@ -58,7 +67,7 @@
 			</div>
 		</div>
 
-		<?php if ( has_nav_menu( 'secondary' ) || ! has_nav_menu( 'primary' ) ) :
+		<?php if ( has_nav_menu( 'secondary' ) || ( ! has_nav_menu( 'primary' ) && ! has_nav_menu( 'social' ) ) ) :
 			// For fallback menu styles
 			$class = 'main-navigation clearfix';
 			if ( ! has_nav_menu( 'secondary' ) ) :

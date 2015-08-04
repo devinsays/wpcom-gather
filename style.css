@@ -8,7 +8,7 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: gather
-Tags: responsive-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, microformats, post-formats, theme-options, threaded-comments, translation-ready
+Tags: responsive-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-menu, featured-images, full-width-template, microformats, theme-options, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -404,12 +404,8 @@ body {
   -webkit-font-smoothing: antialiased;
   word-wrap: break-word;
   min-height: 100%;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -464,9 +460,7 @@ a:active {
 /* Layout
 -------------------------------------------------------------- */
 #page {
-  -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 .content-area {
@@ -710,7 +704,6 @@ a:active {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: pointer;
-  transition: -webkit-transform .2s ease-in-out;
   transition: transform .2s ease-in-out;
 }
 
@@ -760,9 +753,7 @@ a:active {
   }
 
   .dropdown-toggle.toggled:after {
-    -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
 }
 /* Large Screen Styles
@@ -847,100 +838,90 @@ a:active {
   .main-navigation ul ul ul:before {
     display: none;
   }
-
-  /* Social */
-  .main-navigation li.social {
-    float: right;
-  }
-
-  .main-navigation li.inline {
-    float: none;
-  }
-
-  .main-navigation .social > a {
-    display: inline-block;
-  }
-
-  .main-navigation .social span {
-    margin: 0;
-    clip: rect(1px, 1px, 1px, 1px);
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-  }
-
-  .main-navigation .social a:before {
-    display: inline-block;
-    font-family: 'gather-icons';
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  .main-navigation .social a[href*="behance.com"]:before {
-    content: '\f1b4';
-  }
-
-  .main-navigation .social a[href*="dribbble.com"]:before {
-    content: '\f17d';
-  }
-
-  .main-navigation .social a[href*="facebook.com"]:before {
-    content: '\f09a';
-  }
-
-  .main-navigation .social a[href*="flickr.com"]:before {
-    content: '\f16e';
-  }
-
-  .main-navigation .social a[href*="github.com"]:before {
-    content: '\f09b';
-  }
-
-  .main-navigation .social a[href*="linkedin.com"]:before {
-    content: '\f0e1';
-  }
-
-  .main-navigation .social a[href*="pinterest.com"]:before {
-    content: '\f0d2';
-  }
-
-  .main-navigation .social a[href*="plus.google.com"]:before {
-    content: '\f0d5';
-  }
-
-  .main-navigation .social a[href*="instagr.am"]:before,
-  .main-navigation .social a[href*="instagram.com"]:before {
-    content: '\f16d';
-  }
-
-  .main-navigation .social a[href*="skype.com"]:before {
-    content: '\f17e';
-  }
-
-  .main-navigation .social a[href*="soundcloud.com"]:before {
-    content: '\f1be';
-  }
-
-  .main-navigation .social a[href*="spotify.com"]:before {
-    content: '\f1bc';
-  }
-
-  .main-navigation .social a[href*="tumblr.com"]:before {
-    content: '\f173';
-  }
-
-  .main-navigation .social a[href*="twitter.com"]:before {
-    content: '\f099';
-  }
-
-  .main-navigation .social a[href*="vimeo.com"]:before {
-    content: '\f194';
-  }
 }
+/* Social Menu
+-------------------------------------------------------------- */
+.social-menu a span {
+  margin: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.social-menu a:before {
+  display: inline-block;
+  font-family: 'gather-icons';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: '\f1b4';
+}
+
+.social-menu a[href*="behance.com"]:before {
+  content: '\f1b4';
+}
+
+.social-menu a[href*="dribbble.com"]:before {
+  content: '\f17d';
+}
+
+.social-menu a[href*="facebook.com"]:before {
+  content: '\f09a';
+}
+
+.social-menu a[href*="flickr.com"]:before {
+  content: '\f16e';
+}
+
+.social-menu a[href*="github.com"]:before {
+  content: '\f09b';
+}
+
+.social-menu a[href*="linkedin.com"]:before {
+  content: '\f0e1';
+}
+
+.social-menu a[href*="pinterest.com"]:before {
+  content: '\f0d2';
+}
+
+.social-menu a[href*="plus.google.com"]:before {
+  content: '\f0d5';
+}
+
+.social-menu a[href*="instagr.am"]:before,
+.social-menu a[href*="instagram.com"]:before {
+  content: '\f16d';
+}
+
+.social-menu a[href*="skype.com"]:before {
+  content: '\f17e';
+}
+
+.social-menu a[href*="soundcloud.com"]:before {
+  content: '\f1be';
+}
+
+.social-menu a[href*="spotify.com"]:before {
+  content: '\f1bc';
+}
+
+.social-menu a[href*="tumblr.com"]:before {
+  content: '\f173';
+}
+
+.social-menu li a[href*="twitter.com"]:before {
+  content: '\f099';
+}
+
+.social-menu a[href*="vimeo.com"]:before {
+  content: '\f194';
+}
+
 /* Content
 --------------------------------------------------------------*/
 .sticky {
@@ -1885,3 +1866,5 @@ object {
 .video-player {
   margin-bottom: 30px;
 }
+
+/*# sourceMappingURL=style.css.map */

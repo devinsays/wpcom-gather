@@ -43,6 +43,7 @@ function gather_setup() {
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'gather' ),
 		'secondary' => __( 'Secondary Menu', 'gather' ),
+		'social' => __( 'Social Menu', 'gather' )
 	) );
 
 	/*
