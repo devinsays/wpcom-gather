@@ -46,12 +46,12 @@ if ( ! function_exists( 'gather_show_sidebar' ) ) :
 function gather_show_sidebar() {
 
 	// If an archive page is displayed and display sidebar on archives is checked
-	if ( !is_singular() && !is_404() && !get_theme_mod( 'archive-sidebar', '0' ) ) {
+	if ( !is_singular() && !is_404() && ! get_theme_mod( 'archive-sidebar', '0' ) ) {
 		return false;
 	}
 
 	// If there's no active sidebar widgets
-	if ( !is_active_sidebar( 'primary' ) ) {
+	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		return false;
 	}
 

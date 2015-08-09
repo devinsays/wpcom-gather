@@ -42,7 +42,8 @@ function gather_customize_controls( $wp_customize ) {
 		'label'   => __( 'Standard Layout', 'gather' ),
 		'section'   => 'theme-options',
 		'type'      => 'select',
-		'choices'	=> gather_get_select_choices( 'standard-layout' )
+		'choices'	=> gather_get_select_choices( 'standard-layout' ),
+		'description' => __( 'Sidebar will display if widgets are set.', 'gather' ),
 	) );
 
 	$wp_customize->add_setting( 'archive-layout', array(
