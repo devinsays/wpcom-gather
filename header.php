@@ -23,8 +23,13 @@
 
 	<header id="masthead" class="site-header" role="banner">
 
-		<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
-			<nav id="primary-navigation" class="main-navigation clearfix" role="navigation">
+		<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) :
+			$menu_type = 'single-menu';
+			if ( has_nav_menu( 'primary' ) && has_nav_menu( 'social' ) ):
+				$menu_type = 'double-menu';
+			endif;
+			?>
+			<nav id="primary-navigation" class="main-navigation <?php echo esc_attr( $menu_type ); ?> clearfix" role="navigation">
 				<div class="col-width">
 					<div class="menu-toggle" data-toggle="#primary-navigation .menu">
 						<?php echo esc_html( gather_get_menu_name( 'primary' ) ); ?>

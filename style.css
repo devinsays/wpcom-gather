@@ -759,6 +759,14 @@ a:active {
 /* Large Screen Styles
 -------------------------------------------------------------- */
 @media screen and (min-width: 1040px) {
+  .primary-menu-wrap {
+    float: left;
+  }
+
+  .social-menu-wrap {
+    float: right;
+  }
+
   .menu-toggle {
     display: none;
   }
@@ -858,7 +866,7 @@ a:active {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  content: '\f1b4';
+  content: '\f0c1';
 }
 
 .social-menu a[href*="behance.com"]:before {
