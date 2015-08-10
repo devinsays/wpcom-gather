@@ -43,7 +43,7 @@
 				function() {
 
 					// Remove any inline styles that may have been added to menu
-					$('.main-navigation .menu').attr('style','');
+					$('.main-navigation .menu, .main-navigation .primary-menu, .main-navigation .social-menu').attr('style','');
 					$('.main-navigation').find('.children, .sub-menu').each( function(){
 		    			$(this).attr('style','');
 					});

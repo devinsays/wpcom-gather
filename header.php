@@ -31,23 +31,27 @@
 			?>
 			<nav id="primary-navigation" class="main-navigation <?php echo esc_attr( $menu_type ); ?> clearfix" role="navigation">
 				<div class="col-width">
-					<div class="menu-toggle" data-toggle="#primary-navigation .menu">
+					<div class="menu-toggle" data-toggle="#primary-navigation .primary-menu, #primary-navigation .social-menu">
 						<?php echo esc_html( gather_get_menu_name( 'primary' ) ); ?>
 					</div>
-					<?php wp_nav_menu( array(
-						'theme_location' => 'primary',
-						'container_class' => 'primary-menu-wrap',
-						'menu_class' => 'primary-menu',
-						'link_before' => '<span>',
-						'link_after' => '</span>'
-					) ); ?>
-					<?php wp_nav_menu( array(
-						'theme_location' => 'social',
-						'container_class' => 'social-menu-wrap',
-						'menu_class' => 'social-menu',
-						'link_before' => '<span>',
-						'link_after' => '</span>'
-					) ); ?>
+					<?php if ( has_nav_menu( 'primary' ) ):
+						wp_nav_menu( array(
+							'theme_location' => 'primary',
+							'container_class' => 'primary-menu-wrap',
+							'menu_class' => 'primary-menu',
+							'link_before' => '<span>',
+							'link_after' => '</span>'
+						) );
+					endif; ?>
+					<?php if ( has_nav_menu( 'social' ) ) :
+						wp_nav_menu( array(
+							'theme_location' => 'social',
+							'container_class' => 'social-menu-wrap',
+							'menu_class' => 'social-menu',
+							'link_before' => '<span>',
+							'link_after' => '</span>'
+						) );
+					endif; ?>
 				</div>
 			</nav>
 		<?php endif; ?>

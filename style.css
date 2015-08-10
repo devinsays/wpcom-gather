@@ -404,8 +404,12 @@ body {
   -webkit-font-smoothing: antialiased;
   word-wrap: break-word;
   min-height: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -460,7 +464,9 @@ a:active {
 /* Layout
 -------------------------------------------------------------- */
 #page {
-  flex: 1 0 auto;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
 .content-area {
@@ -704,6 +710,7 @@ a:active {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: pointer;
+  transition: -webkit-transform .2s ease-in-out;
   transition: transform .2s ease-in-out;
 }
 
@@ -753,7 +760,9 @@ a:active {
   }
 
   .dropdown-toggle.toggled:after {
-    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
 }
 /* Large Screen Styles
@@ -849,87 +858,89 @@ a:active {
 }
 /* Social Menu
 -------------------------------------------------------------- */
-.social-menu a span {
-  margin: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-}
+/* Icons aren't shown in small screen layouts */
+@media screen and (min-width: 1040px) {
+  .social-menu a span {
+    margin: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
 
-.social-menu a:before {
-  display: inline-block;
-  font-family: 'gather-icons';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: '\f0c1';
-}
+  .social-menu a:before {
+    display: inline-block;
+    font-family: 'gather-icons';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: '\f0c1';
+  }
 
-.social-menu a[href*="behance.com"]:before {
-  content: '\f1b4';
-}
+  .social-menu a[href*="behance.com"]:before {
+    content: '\f1b4';
+  }
 
-.social-menu a[href*="dribbble.com"]:before {
-  content: '\f17d';
-}
+  .social-menu a[href*="dribbble.com"]:before {
+    content: '\f17d';
+  }
 
-.social-menu a[href*="facebook.com"]:before {
-  content: '\f09a';
-}
+  .social-menu a[href*="facebook.com"]:before {
+    content: '\f09a';
+  }
 
-.social-menu a[href*="flickr.com"]:before {
-  content: '\f16e';
-}
+  .social-menu a[href*="flickr.com"]:before {
+    content: '\f16e';
+  }
 
-.social-menu a[href*="github.com"]:before {
-  content: '\f09b';
-}
+  .social-menu a[href*="github.com"]:before {
+    content: '\f09b';
+  }
 
-.social-menu a[href*="linkedin.com"]:before {
-  content: '\f0e1';
-}
+  .social-menu a[href*="linkedin.com"]:before {
+    content: '\f0e1';
+  }
 
-.social-menu a[href*="pinterest.com"]:before {
-  content: '\f0d2';
-}
+  .social-menu a[href*="pinterest.com"]:before {
+    content: '\f0d2';
+  }
 
-.social-menu a[href*="plus.google.com"]:before {
-  content: '\f0d5';
-}
+  .social-menu a[href*="plus.google.com"]:before {
+    content: '\f0d5';
+  }
 
-.social-menu a[href*="instagr.am"]:before,
-.social-menu a[href*="instagram.com"]:before {
-  content: '\f16d';
-}
+  .social-menu a[href*="instagr.am"]:before,
+  .social-menu a[href*="instagram.com"]:before {
+    content: '\f16d';
+  }
 
-.social-menu a[href*="skype.com"]:before {
-  content: '\f17e';
-}
+  .social-menu a[href*="skype.com"]:before {
+    content: '\f17e';
+  }
 
-.social-menu a[href*="soundcloud.com"]:before {
-  content: '\f1be';
-}
+  .social-menu a[href*="soundcloud.com"]:before {
+    content: '\f1be';
+  }
 
-.social-menu a[href*="spotify.com"]:before {
-  content: '\f1bc';
-}
+  .social-menu a[href*="spotify.com"]:before {
+    content: '\f1bc';
+  }
 
-.social-menu a[href*="tumblr.com"]:before {
-  content: '\f173';
-}
+  .social-menu a[href*="tumblr.com"]:before {
+    content: '\f173';
+  }
 
-.social-menu li a[href*="twitter.com"]:before {
-  content: '\f099';
-}
+  .social-menu li a[href*="twitter.com"]:before {
+    content: '\f099';
+  }
 
-.social-menu a[href*="vimeo.com"]:before {
-  content: '\f194';
+  .social-menu a[href*="vimeo.com"]:before {
+    content: '\f194';
+  }
 }
-
 /* Content
 --------------------------------------------------------------*/
 .sticky {
@@ -1874,5 +1885,3 @@ object {
 .video-player {
   margin-bottom: 30px;
 }
-
-/*# sourceMappingURL=style.css.map */
