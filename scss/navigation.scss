@@ -220,6 +220,9 @@
 	.social-menu a[href*="behance.com"]:before {
 		content: '\f1b4';
 	}
+	.social-menu a[href*="digg.com"]:before {
+		content: '\f1a6';
+	}
 	.social-menu a[href*="dribbble.com"]:before {
 		content: '\f17d';
 	}
@@ -228,6 +231,9 @@
 	}
 	.social-menu a[href*="flickr.com"]:before {
 		content: '\f16e';
+	}
+	.social-menu a[href*="foursquare.com"]:before {
+		content: '\e604';
 	}
 	.social-menu a[href*="github.com"]:before {
 		content: '\f09b';
@@ -245,6 +251,9 @@
 	.social-menu a[href*="instagram.com"]:before {
 		content: '\f16d';
 	}
+	.social-menu a[href*="reddit.com"]:before {
+		content: '\e601';
+	}
 	.social-menu a[href*="skype.com"]:before {
 		content: '\f17e';
 	}
@@ -257,10 +266,28 @@
 	.social-menu a[href*="tumblr.com"]:before {
 		content: '\f173';
 	}
-	.social-menu li a[href*="twitter.com"]:before {
+	.social-menu a[href*="twitch.tv"]:before {
+		content: '\e600';
+	}
+	.social-menu a[href*="twitter.com"]:before {
 		content: '\f099';
 	}
 	.social-menu a[href*="vimeo.com"]:before {
 		content: '\f194';
+	}
+	.social-menu a[href*="wordpress.com"]:before,
+	.social-menu a[href*="wordpress.org"]:before {
+		content: '\f19a';
+	}
+	.social-menu a[href*="youtube.com"]:before {
+		content: "\e605";
+	}
+	/* RSS */
+	.social-menu a[href*='/feed']:before {
+		content: "\e603";
+	}
+	/* Email */
+	.social-menu a[href*='mailto']:before {
+		content: "\e602";
 	}
 }

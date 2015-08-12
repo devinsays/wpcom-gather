@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'gather-icons';
-	src:url('gather-icons.eot?v1.1');
-	src:url('gather-icons.eot?#v1.1') format('embedded-opentype'),
-		url('gather-icons.woff?v1.1') format('woff'),
-		url('gather-icons.ttf?v1.1') format('truetype'),
-		url('gather-icons.svg?v1.1#gather') format('svg');
+	src:url('gather-icons.eot?v1.2');
+	src:url('gather-icons.eot?#v1.2') format('embedded-opentype'),
+		url('gather-icons.woff?v1.2') format('woff'),
+		url('gather-icons.ttf?v1.2') format('truetype'),
+		url('gather-icons.svg?v1.2#gather') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -101,4 +101,25 @@
 }
 .gather-icon-soundcloud:before {
 	content: "\f1be";
+}
+.gather-icon-twitch:before {
+	content: "\e600";
+}
+.gather-icon-reddit:before {
+	content: "\e601";
+}
+.gather-icon-mail:before {
+	content: "\e602";
+}
+.gather-icon-rss:before {
+	content: "\e603";
+}
+.gather-icon-foursquare:before {
+	content: "\e604";
+}
+.gather-icon-youtube:before {
+	content: "\e605";
+}
+.gather-icon-digg:before {
+	content: "\f1a6";
 }
