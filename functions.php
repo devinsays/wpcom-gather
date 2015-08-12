@@ -41,9 +41,9 @@ function gather_setup() {
 
 	// Registers navigation menus
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'gather' ),
-		'secondary' => __( 'Secondary Menu', 'gather' ),
-		'social' => __( 'Social Menu', 'gather' )
+		'primary' => esc_html__( 'Primary Menu', 'gather' ),
+		'secondary' => esc_html__( 'Secondary Menu', 'gather' ),
+		'social' => esc_html__( 'Social Menu', 'gather' )
 	) );
 
 	/*
@@ -51,7 +51,7 @@ function gather_setup() {
 	 * to output valid HTML5.
 	 */
 	add_theme_support( 'html5', array(
-		'comment-list', 'gallery', 'caption'
+		'comment-form', 'gallery', 'caption'
 	) );
 
 	// Post editor styles
@@ -102,7 +102,7 @@ endif;
 function gather_widgets_init() {
 
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'gather' ),
+		'name'          => esc_html__( 'Sidebar', 'gather' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget module %2$s">',
@@ -112,7 +112,7 @@ function gather_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Footer', 'gather' ),
+		'name'          => esc_html__( 'Footer', 'gather' ),
 		'id'            => 'footer',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -251,6 +251,3 @@ require get_template_directory() . '/inc/styles.php';
 
 // Load Jetpack compatibility file.
 require get_template_directory() . '/inc/jetpack.php';
-
-// Load WordPress.com compatibility file.
-require get_template_directory() . '/inc/wpcom.php';

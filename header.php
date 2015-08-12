@@ -19,7 +19,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'gather' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'gather' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
 
@@ -29,7 +29,7 @@
 				$menu_type = 'double-menu';
 			endif;
 			?>
-			<nav id="primary-navigation" class="main-navigation <?php echo esc_attr( $menu_type ); ?> clearfix" role="navigation">
+			<nav id="primary-navigation" class="main-navigation <?php echo esc_attr_e( $menu_type ); ?> clearfix" role="navigation">
 				<div class="col-width">
 					<div class="menu-toggle" data-toggle="#primary-navigation .primary-menu, #primary-navigation .social-menu">
 						<?php echo esc_html( gather_get_menu_name( 'primary' ) ); ?>

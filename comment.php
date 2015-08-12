@@ -28,7 +28,7 @@ if ( $post ) {
 			</div><!-- .comment-author -->
 
 			<?php if ( '0' == $comment->comment_approved ) : ?>
-			<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'gather' ); ?></p>
+			<p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'gather' ); ?></p>
 			<?php endif; ?>
 		</header><!-- .comment-meta -->
 
@@ -49,7 +49,7 @@ if ( $post ) {
 				</time>
 			</a>
 			</span>
-			<?php edit_comment_link( __( 'Edit', 'gather' ), '<span class="edit-comment">', '</span>' ); ?>
+			<?php edit_comment_link( esc_html__( 'Edit', 'gather' ), '<span class="edit-comment">', '</span>' ); ?>
 		</footer><!-- .comment-metadata -->
 
 	</article><!-- .comment-body -->

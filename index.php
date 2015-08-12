@@ -28,8 +28,8 @@ get_header(); ?>
 			</div>
 
 			<?php the_posts_navigation( array(
-				'prev_text' => __( '<span class="meta-nav">&larr;</span> Older posts', 'gather' ),
-				'next_text' => __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'gather' )
+				'prev_text' => esc_html__( '<span class="meta-nav">&larr;</span> Older posts', 'gather' ),
+				'next_text' => esc_html__( 'Newer posts <span class="meta-nav">&rarr;</span>', 'gather' )
 			) ); ?>
 
 		<?php else : ?>

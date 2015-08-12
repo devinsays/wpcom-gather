@@ -8,7 +8,7 @@
 get_header(); ?>
 
 	<header class="page-header">
-		<h1 class="page-title"><?php printf( __( 'Search results for: %s', 'gather' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+		<h1 class="page-title"><?php printf( esc_html__( 'Search results for: %s', 'gather' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 	</header><!-- .page-header -->
 
 	<div id="primary" class="content-area">
@@ -26,8 +26,8 @@ get_header(); ?>
 			</div>
 
 			<?php the_posts_navigation( array(
-				'prev_text' => __( '<span class="meta-nav">&larr;</span> Older posts', 'gather' ),
-				'next_text' => __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'gather' )
+				'prev_text' => esc_html__( '<span class="meta-nav">&larr;</span> Older posts', 'gather' ),
+				'next_text' => esc_html__( 'Newer posts <span class="meta-nav">&rarr;</span>', 'gather' )
 			) ); ?>
 
 		<?php else : ?>

@@ -92,7 +92,7 @@ function gather_get_menu_name( $location ) {
 
 	// If fallback_cb is used, return default name
 	if ( 'secondary' == $location && ! has_nav_menu( 'secondary' ) ) {
-		return __( 'Menu', 'gather' );
+		return esc_html__( 'Menu', 'gather' );
 	}
 
     $locations = get_nav_menu_locations();

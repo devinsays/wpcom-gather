@@ -41,7 +41,7 @@ if ( ! function_exists( 'gather_post_meta' ) ) :
 function gather_post_meta( $type = 'post' ) {
 
 	/* translators: used between list items, there is a space after the comma */
-	$category_list = get_the_category_list( __( ', ', 'gather' ) );
+	$category_list = get_the_category_list( esc_html__( ', ', 'gather' ) );
 
 	if ( $category_list ) {
 		echo '<span class="category-meta meta-group">';
@@ -50,7 +50,7 @@ function gather_post_meta( $type = 'post' ) {
 	}
 
 	/* translators: used between list items, there is a space after the comma */
-	$tag_list = get_the_tag_list( '', __( ', ', 'gather' ) );
+	$tag_list = get_the_tag_list( '', esc_html__( ', ', 'gather' ) );
 
 	if ( $tag_list ) {
 		echo '<span class="tag-meta meta-group">';
@@ -58,7 +58,7 @@ function gather_post_meta( $type = 'post' ) {
 		echo '</span>';
 	}
 
-	edit_post_link( __( 'Edit', 'gather' ), '<span class="edit-meta meta-group"><span class="edit-link">', '</span></span></span>' );
+	edit_post_link( esc_html__( 'Edit', 'gather' ), '<span class="edit-meta meta-group"><span class="edit-link">', '</span></span></span>' );
 
 }
 endif;

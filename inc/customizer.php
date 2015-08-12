@@ -14,7 +14,7 @@ function gather_customize_controls( $wp_customize ) {
 
 	// Layout Settings
 	$wp_customize->add_section( 'theme-options' , array(
-		'title' => __( 'Theme Options', 'gather' ),
+		'title' => esc_html__( 'Theme Options', 'gather' ),
 		'priority'   => 70,
 	) );
 
@@ -26,7 +26,7 @@ function gather_customize_controls( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'center-branding', array(
-		'label'   => __( 'Center Header Text/Logo', 'gather' ),
+		'label'   => esc_html__( 'Center Header Text/Logo', 'gather' ),
 		'section'   => 'theme-options',
 		'type'      => 'checkbox'
 	) );
@@ -39,11 +39,11 @@ function gather_customize_controls( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'standard-layout', array(
-		'label'   => __( 'Standard Layout', 'gather' ),
+		'label'   => esc_html__( 'Standard Layout', 'gather' ),
 		'section'   => 'theme-options',
 		'type'      => 'select',
 		'choices'	=> gather_get_select_choices( 'standard-layout' ),
-		'description' => __( 'Sidebar will display if widgets are set.', 'gather' ),
+		'description' => esc_html__( 'Sidebar will display if widgets are set.', 'gather' ),
 	) );
 
 	$wp_customize->add_setting( 'archive-layout', array(
@@ -54,7 +54,7 @@ function gather_customize_controls( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'archive-layout', array(
-		'label'   => __( 'Archive Layout', 'gather' ),
+		'label'   => esc_html__( 'Archive Layout', 'gather' ),
 		'section'   => 'theme-options',
 		'type'      => 'select',
 		'choices'	=> gather_get_select_choices( 'archive-layout' )
@@ -67,7 +67,7 @@ function gather_customize_controls( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'archive-sidebar', array(
-		'label'   => __( 'Display Sidebar on Archives', 'gather' ),
+		'label'   => esc_html__( 'Display Sidebar on Archives', 'gather' ),
 		'section'   => 'theme-options',
 		'type'      => 'checkbox'
 	) );
@@ -117,17 +117,17 @@ function gather_get_select_choices( $id ) {
 
 	if ( 'standard-layout' == $id ) :
 		$choices = array(
-			'sidebar-right' => __( 'Sidebar Right', 'gather' ),
-			'sidebar-left' => __( 'Sidebar Left', 'gather' )
+			'sidebar-right' => esc_html__( 'Sidebar Right', 'gather' ),
+			'sidebar-left' => esc_html__( 'Sidebar Left', 'gather' )
 		);
 	endif;
 
 	if ( 'archive-layout' == $id ) :
 		$choices = array(
-			'standard' => __( 'Standard Layout', 'gather' ),
-			'column-masonry-2' => __( '2 Column Masonry', 'gather' ),
-			'column-masonry-3' => __( '3 Column Masonry', 'gather' ),
-			'column-masonry-4' => __( '4 Column Masonry', 'gather' )
+			'standard' => esc_html__( 'Standard Layout', 'gather' ),
+			'column-masonry-2' => esc_html__( '2 Column Masonry', 'gather' ),
+			'column-masonry-3' => esc_html__( '3 Column Masonry', 'gather' ),
+			'column-masonry-4' => esc_html__( '4 Column Masonry', 'gather' )
 		);
 	endif;
 

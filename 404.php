@@ -13,11 +13,11 @@ get_header(); ?>
 			<div id="error-404" class="module">
 
 					<header class="entry-header">
-						<h1 class="entry-title"><?php _e( '404 - Page Not Found', 'gather' ); ?></h1>
+						<h1 class="entry-title"><?php esc_html_e( '404 - Page Not Found', 'gather' ); ?></h1>
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">
-						<p><?php _e( 'The page you are looking for doesn\'t exist. Try a search?', 'gather' ); ?></p>
+						<p><?php esc_html_e( 'The page you are looking for doesn\'t exist. Try a search?', 'gather' ); ?></p>
 
 						<?php get_search_form(); ?>
 

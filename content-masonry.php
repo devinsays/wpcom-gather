@@ -24,13 +24,13 @@
 		<?php the_excerpt(); ?>
 	<?php
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'gather' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'gather' ),
 			'after'  => '</div>',
 		) );
 	?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta entry-footer-meta">
-		<span class="more-link"><a href="<?php the_permalink(); ?>"><?php _e( 'View More', 'gather' ); ?></a></span>
+		<span class="more-link"><a href="<?php the_permalink(); ?>"><?php esc_html_e( 'View More', 'gather' ); ?></a></span>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
