@@ -24,13 +24,15 @@
 	<?php } ?>
 
 	<div class="entry-content clearfix">
-		<?php the_excerpt(); ?>
-	<?php
-		wp_link_pages( array(
+		<?php if ( 'excerpt' == get_theme_mod( 'archive-content', 'excerpt' ) || has_excerpt() ) {
+			the_excerpt();
+		} else {
+			the_content( esc_html__( 'Continue reading <span class="meta-nav">&rarr;</span>', 'gather' ) );
+		} ?>
+		<?php wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'gather' ),
 			'after'  => '</div>',
-		) );
-	?>
+		) ); ?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta entry-footer-meta">

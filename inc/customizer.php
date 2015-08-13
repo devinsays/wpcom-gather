@@ -32,7 +32,6 @@ function gather_customize_controls( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( 'standard-layout', array(
-		'default'    =>  1,
 		'transport'  =>  'refresh',
 		'default' => 'sidebar-right',
 		'sanitize_callback' => 'gather_sanitize_standard_layout'
@@ -58,6 +57,20 @@ function gather_customize_controls( $wp_customize ) {
 		'section'   => 'theme-options',
 		'type'      => 'select',
 		'choices'	=> gather_get_select_choices( 'archive-layout' )
+	) );
+
+	$wp_customize->add_setting( 'archive-content', array(
+		'default'    =>  'excerpts',
+		'transport'  =>  'refresh',
+		'sanitize_callback' => 'gather_sanitize_archive_content'
+	) );
+
+	$wp_customize->add_control( 'archive-content', array(
+		'label'   => esc_html__( 'Archive Content', 'gather' ),
+		'section'   => 'theme-options',
+		'type'      => 'select',
+		'choices'	=> gather_get_select_choices( 'archive-content' ),
+		'description' => esc_html__( 'Choose to display full content or excerpts.', 'gather' ),
 	) );
 
 	$wp_customize->add_setting( 'archive-sidebar', array(
@@ -114,6 +127,13 @@ if ( ! function_exists( 'gather_select_settings' ) ) :
 function gather_get_select_choices( $id ) {
 
 	$choices = '';
+
+	if ( 'archive-content' == $id ) :
+		$choices = array(
+			'excerpt' => esc_html__( 'Excerpts', 'gather' ),
+			'content' => esc_html__( 'Content', 'gather' )
+		);
+	endif;
 
 	if ( 'standard-layout' == $id ) :
 		$choices = array(
@@ -172,6 +192,25 @@ function gather_sanitize_textarea( $content ) {
 
 }
 endif;
+
+if ( ! function_exists( 'gather_sanitize_archive_content' ) ) :
+/**
+ * Sanitization callback for archive content.
+ *
+ * @since Gather 1.0.0
+ *
+ * @param string $value Archive content type.
+ * @return string content type.
+ */
+function gather_sanitize_archive_content( $value ) {
+
+	if ( 'content' == $value ) {
+		return 'content';
+	}
+	return 'excerpt';
+
+}
+endif; // gather_sanitize_archive_content
 
 if ( ! function_exists( 'gather_sanitize_archive_layout' ) ) :
 /**
