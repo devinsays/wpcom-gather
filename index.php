@@ -27,10 +27,7 @@ get_header(); ?>
 			<?php endwhile; ?>
 			</div>
 
-			<?php the_posts_navigation( array(
-				'prev_text' => esc_html__( '<span class="meta-nav">&larr;</span> Older posts', 'gather' ),
-				'next_text' => esc_html__( 'Newer posts <span class="meta-nav">&rarr;</span>', 'gather' )
-			) ); ?>
+			<?php gather_posts_navigation(); ?>
 
 		<?php else : ?>
 

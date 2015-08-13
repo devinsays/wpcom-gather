@@ -62,3 +62,25 @@ function gather_post_meta( $type = 'post' ) {
 
 }
 endif;
+
+if ( ! function_exists( 'gather_posts_navigation' ) ) :
+/**
+ * Outputs navigation on archives.
+ */
+function gather_posts_navigation() {
+
+	the_posts_navigation( array(
+		'prev_text' => sprintf(
+			'<span class="meta-nav">%s</span> %s',
+			esc_html_x( '&larr;', 'Older posts', 'gather' ),
+			esc_html__( 'Older posts', 'gather' )
+		),
+		'next_text' => sprintf(
+			'%s <span class="meta-nav">%s</span>',
+			esc_html__( 'Newer posts', 'gather' ),
+			esc_html_x( '&rarr;', 'Newer posts', 'gather' )
+		)
+	) );
+
+}
+endif;
