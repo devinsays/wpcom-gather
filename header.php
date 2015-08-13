@@ -65,7 +65,7 @@
 
 				<h1 class="site-title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<?php echo get_bloginfo( 'name' ); ?>
+						<?php bloginfo( 'name' ); ?>
 					</a>
 				</h1>
 
@@ -83,7 +83,7 @@
 				$class = 'fallback-menu ' . $class;
 			endif;
 			?>
-			<nav id="secondary-navigation" class="<?php echo $class; ?>" role="navigation">
+			<nav id="secondary-navigation" class="<?php echo esc_attr( $class ); ?>" role="navigation">
 				<div class="col-width">
 					<div class="menu-toggle" data-toggle="#secondary-navigation .menu">
 						<?php echo esc_html( gather_get_menu_name( 'secondary' ) ); ?>

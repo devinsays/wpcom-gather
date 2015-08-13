@@ -69,7 +69,7 @@ function gather_load_masonry() {
 
 	if ( !is_singular() && !is_404() ) {
 		$archive_layout = get_theme_mod( 'archive-layout', 'column-masonry-3' );
-		if ( $archive_layout != 'standard' ) {
+		if ( 'standard' != $archive_layout ) {
 			return true;
 		}
 	}

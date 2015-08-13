@@ -19,12 +19,12 @@ function gather_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		_x( '%s', 'post date', 'gather' ),
+		esc_html_x( '%s', 'post date', 'gather' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
-		_x( 'By %s', 'post author', 'gather' ),
+		esc_html_x( 'By %s', 'post author', 'gather' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 

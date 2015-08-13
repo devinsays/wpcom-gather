@@ -16,7 +16,7 @@ if ( $post ) {
 }
 ?>
 <li id="comment-<?php comment_ID(); ?>" <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?>>
-	<article id="div-comment-<?php comment_ID(); ?>" class="<?php echo $comment_body_class; ?>">
+	<article id="div-comment-<?php comment_ID(); ?>" class="<?php echo esc_attr( $comment_body_class ); ?>">
 		<header class="comment-meta">
 			<div class="comment-author vcard">
 				<?php if ( 'trackback' == $comment->comment_type || 'pingback' == $comment->comment_type ) { ?>
@@ -45,7 +45,7 @@ if ( $post ) {
 			<span class="comment-time">
 			<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID, $args ) ); ?>">
 				<time datetime="<?php comment_time( 'c' ); ?>">
-					<?php printf( _x( '%1$s at %2$s', 'gather', '1: date, 2: time' ), get_comment_date(), get_comment_time() ); ?>
+					<?php printf( esc_html_x( '%1$s at %2$s', 'gather', '1: date, 2: time' ), get_comment_date(), get_comment_time() ); ?>
 				</time>
 			</a>
 			</span>

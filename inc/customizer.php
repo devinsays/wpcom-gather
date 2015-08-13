@@ -146,7 +146,7 @@ if ( ! function_exists( 'gather_sanitize_checkbox' ) ) :
  * @return boolean				The sanitized boolean.
  */
 function gather_sanitize_checkbox( $value ) {
-	if ( $value == 1 ) {
+	if ( 1 == $value ) {
 		return 1;
     } else {
 		return 0;

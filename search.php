@@ -16,7 +16,7 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<div id="posts-wrap" data-columns="<?php echo gather_get_columns(); ?>">
+			<div id="posts-wrap" data-columns="<?php echo esc_attr( gather_get_columns() ); ?>">
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
