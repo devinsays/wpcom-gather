@@ -646,18 +646,6 @@ a:active {
   border-top: 1px solid #a5dcc0;
 }
 
-.fallback-menu ul {
-  display: block;
-}
-
-.fallback-menu ul ul {
-  display: none;
-}
-
-.fallback-menu .menu {
-  display: none;
-}
-
 .main-navigation li {
   position: relative;
 }
@@ -780,10 +768,6 @@ a:active {
     display: none;
   }
 
-  .fallback-menu .menu {
-    display: block;
-  }
-
   .dropdown-toggle {
     width: auto;
     border: none;
@@ -809,8 +793,7 @@ a:active {
     color: #fff;
   }
 
-  .main-navigation .menu-item-has-children > a,
-  .main-navigation .page_item_has_children > a {
+  .main-navigation .menu-item-has-children > a {
     padding-left: 30px;
   }
 
@@ -946,7 +929,7 @@ a:active {
   }
 
   .social-menu a[href*="twitch.tv"]:before {
-    content: "\e600";
+    content: '\e600';
   }
 
   .social-menu a[href*="twitter.com"]:before {

@@ -76,14 +76,8 @@
 			</div>
 		</div>
 
-		<?php if ( has_nav_menu( 'secondary' ) || ( ! has_nav_menu( 'primary' ) && ! has_nav_menu( 'social' ) ) ) :
-			// For fallback menu styles
-			$class = 'main-navigation clearfix';
-			if ( ! has_nav_menu( 'secondary' ) ) :
-				$class = 'fallback-menu ' . $class;
-			endif;
-			?>
-			<nav id="secondary-navigation" class="<?php echo esc_attr( $class ); ?>" role="navigation">
+		<?php if ( has_nav_menu( 'secondary' ) ) : ?>
+			<nav id="secondary-navigation" class="main-navigation clearfix" role="navigation">
 				<div class="col-width">
 					<div class="menu-toggle" data-toggle="#secondary-navigation .menu">
 						<?php echo esc_html( gather_get_menu_name( 'secondary' ) ); ?>
@@ -91,8 +85,7 @@
 					<?php wp_nav_menu( array(
 						'theme_location' => 'secondary',
 						'link_before' => '<span>',
-						'link_after' => '</span>',
-						'fallback_cb' => 'wp_page_menu'
+						'link_after' => '</span>'
 					) ); ?>
 				</div>
 			</nav>

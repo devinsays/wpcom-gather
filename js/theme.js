@@ -80,9 +80,6 @@
 			// Add dropdown toggle to display child menu items
 			$('.main-navigation .menu > .menu-item-has-children').append( '<span class="dropdown-toggle" />');
 
-			// For fallback menu
-			$('.fallback-menu .menu ul > .page_item_has_children').append( '<span class="dropdown-toggle" />');
-
 			// When mobile menu is tapped/clicked
 			$('.menu-toggle').on( 'click', function() {
 				var menu = $(this).data('toggle');
