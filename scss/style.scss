@@ -182,7 +182,8 @@ a:active {
 
 @media screen and (max-width:510px) {
 	.single #page .content-area {
-		margin-top:1px;
+		margin-top: 0;
+		border-top: 1px solid #f2f2f2;
 	}
 	.single #content .col-width {
 		width: 100%;
@@ -192,8 +193,8 @@ a:active {
 		margin-bottom: 0;
 	}
 	.single.sidebar-right .site-content .secondary {
-		margin:0;
-		margin-top:1px;
+		margin: 0;
+		border-top: 1px solid #f2f2f2;
 	}
 }
 
@@ -625,6 +626,18 @@ a:active {
 	clear:both;
 	overflow: hidden;
 	font-weight:500;
+}
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous {
+	float: left;
+	width: 50%;
+	font-size: 15px;
+}
+.comment-navigation .nav-next,
+.posts-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
 	font-size: 15px;
 }
 .site-main .comment-navigation {
@@ -633,26 +646,42 @@ a:active {
 .site-main #comment-nav-below {
 	padding: 4% 6% 0;
 }
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-	float: left;
-	width: 50%;
-}
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
-}
 .posts-navigation a {
 	padding:15px 30px;
 	display: inline-block;
 }
 .post-navigation {
-	padding:30px 6%;
 	border-top: 1px solid #f0f0f0;
+}
+.post-navigation .nav-previous,
+.post-navigation .nav-next {
+	padding: 30px 6%;
+}
+.post-navigation .nav-next {
+	border-top: 1px solid #f0f0f0;
+}
+
+@media screen and (min-width: 510px ) {
+	.post-navigation {
+		padding:30px 6%;
+	}
+	.post-navigation .nav-previous,
+	.post-navigation .nav-next {
+		padding: 0;
+		border: none;
+	}
+	.post-navigation .nav-previous {
+		float: left;
+		width: 50%;
+		font-size: 15px;
+	}
+	.post-navigation .nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+		font-size: 15px;
+	}
+
 }
 
 /* Comments
