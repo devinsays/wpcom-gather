@@ -344,27 +344,49 @@ a:active {
 /* Author Meta*/
 
 .author-box {
+
 	background: #fafafa;
 	border-top: 1px solid #f0f0f0;
 	border-bottom: 1px solid #f0f0f0;
 	position: relative;
 	padding:20px;
 	min-height: 110px;
+
+	.author-avatar {
+		width: 32px;
+		float: left;
+		margin: 0 15px 10px 0;
+	}
+	.author-avatar img {
+		border-radius: 50%;
+	}
+	h3 {
+		font-size: 18px;
+		margin-bottom: 5px;
+		display: inline-block;
+	}
+	.author-description {
+		clear: both;
+	}
+
 }
-.author-avatar {
-	position: absolute;
-	left: 20px;
-	top: 20px;
-}
-.author-avatar img {
-	border-radius: 50%;
-}
-.author-description {
-	margin-left: 90px;
-}
-.author-description h3 {
-	font-size: 18px;
-	margin-bottom: 5px;
+
+
+
+
+@media screen and (min-width:900px) {
+	.author-box {
+		.author-avatar {
+			position: absolute;
+			left: 20px;
+			top: 20px;
+			margin: 0;
+			width: 64px;
+		}
+		.author-information {
+			margin-left: 90px;
+		}
+	}
 }
 
 /* Post Meta */
