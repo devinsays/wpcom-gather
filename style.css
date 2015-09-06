@@ -404,8 +404,12 @@ body {
   -webkit-font-smoothing: antialiased;
   word-wrap: break-word;
   min-height: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -460,7 +464,9 @@ a:active {
 /* Layout
 -------------------------------------------------------------- */
 #page {
-  flex: 1 0 auto;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
 .content-area {
@@ -661,7 +667,7 @@ a:active {
 }
 
 .main-navigation .menu-item-has-children > a {
-  padding-right: 30px;
+  padding-right: 55px;
 }
 
 .main-navigation ul ul a:hover {
@@ -689,10 +695,11 @@ a:active {
   right: 50%;
   margin-right: -4px;
   top: 50%;
-  margin-top: -7px;
+  margin-top: -8px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: pointer;
+  transition: -webkit-transform .2s ease-in-out;
   transition: transform .2s ease-in-out;
 }
 
@@ -742,7 +749,9 @@ a:active {
   }
 
   .dropdown-toggle.toggled:after {
-    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
 }
 /* Large Screen Styles
@@ -1950,5 +1959,3 @@ object {
 .video-player {
   margin-bottom: 30px;
 }
-
-/*# sourceMappingURL=style.css.map */

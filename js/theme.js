@@ -78,7 +78,8 @@
 		navigationInit: function() {
 
 			// Add dropdown toggle to display child menu items
-			$('.main-navigation .menu > .menu-item-has-children').append( '<span class="dropdown-toggle" />');
+			$('.primary-menu > .menu-item-has-children').append( '<span class="dropdown-toggle" />');
+			$('.secondary-menu > .menu-item-has-children').append( '<span class="dropdown-toggle" />');
 
 			// When mobile menu is tapped/clicked
 			$('.menu-toggle').on( 'click', function() {
@@ -88,7 +89,7 @@
 
 			// When mobile submenu is tapped/clicked
 			$('.dropdown-toggle').on( 'click', function() {
-				var $submenu = $(this).parent().find('.children,.sub-menu'),
+				var $submenu = $(this).parent().find('.children, .sub-menu'),
 					$toggle = $(this);
 				$submenu.toggle( 0, function() {
 					$toggle.toggleClass('toggled');
