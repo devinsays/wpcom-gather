@@ -99,7 +99,7 @@
 /* Small Screen Styles
 -------------------------------------------------------------- */
 
-@media screen and ( max-width: 1039px ) {
+@media screen and ( max-width: 1023px ) {
 	.main-navigation .col-width {
 		width:100%;
 	}
@@ -111,7 +111,7 @@
 /* Large Screen Styles
 -------------------------------------------------------------- */
 
-@media screen and ( min-width: 1040px ) {
+@media screen and ( min-width: 1024px ) {
 	.primary-menu-wrap {
 		float: left;
 	}
@@ -185,7 +185,7 @@
 -------------------------------------------------------------- */
 
 /* Icons aren't shown in small screen layouts */
-@media screen and ( min-width: 1040px ) {
+@media screen and ( min-width: 1024px ) {
 	.social-menu a span {
 		margin: 0;
 		clip: rect(1px, 1px, 1px, 1px);
