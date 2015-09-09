@@ -404,8 +404,12 @@ body {
   -webkit-font-smoothing: antialiased;
   word-wrap: break-word;
   min-height: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -460,7 +464,9 @@ a:active {
 /* Layout
 -------------------------------------------------------------- */
 #page {
-  flex: 1 0 auto;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
 .content-area {
@@ -693,6 +699,7 @@ a:active {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: pointer;
+  transition: -webkit-transform .2s ease-in-out;
   transition: transform .2s ease-in-out;
 }
 
@@ -742,7 +749,9 @@ a:active {
   }
 
   .dropdown-toggle.toggled:after {
-    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
 }
 /* Large Screen Styles
@@ -1341,6 +1350,30 @@ a:active {
 #calendar_wrap td {
   padding: 2%;
   text-align: center;
+}
+
+/* Extended Widget Support */
+.widget_wpcom_social_media_icons_widget a {
+  font-size: 28px;
+}
+
+.widget_authors img {
+  float: left;
+  margin-right: 15px;
+}
+
+.widget_authors li {
+  margin-bottom: 15px;
+}
+
+.widget_authors li:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.widget_author_grid {
+  margin-right: 15px;
 }
 
 @media screen and (max-width: 881px) {
@@ -1957,5 +1990,3 @@ object {
 .video-player {
   margin-bottom: 30px;
 }
-
-/*# sourceMappingURL=style.css.map */

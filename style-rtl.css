@@ -743,7 +743,7 @@ a:active {
 
 /* Small Screen Styles
 -------------------------------------------------------------- */
-@media screen and (max-width: 1039px) {
+@media screen and (max-width: 1023px) {
   .main-navigation .col-width {
     width: 100%;
   }
@@ -756,7 +756,7 @@ a:active {
 }
 /* Large Screen Styles
 -------------------------------------------------------------- */
-@media screen and (min-width: 1040px) {
+@media screen and (min-width: 1024px) {
   .primary-menu-wrap {
     float: right;
   }
@@ -843,7 +843,7 @@ a:active {
 /* Social Menu
 -------------------------------------------------------------- */
 /* Icons aren't shown in small screen layouts */
-@media screen and (min-width: 1040px) {
+@media screen and (min-width: 1024px) {
   .social-menu a span {
     margin: 0;
     clip: rect(1px, 1px, 1px, 1px);
@@ -1341,8 +1341,39 @@ a:active {
   margin-right: 0;
 }
 
+/* Calendar */
 #calendar_wrap {
-  overflow-x: scroll;
+  font-size: 13px;
+}
+
+#calendar_wrap th,
+#calendar_wrap td {
+  padding: 2%;
+  text-align: center;
+}
+
+/* Extended Widget Support */
+.widget_wpcom_social_media_icons_widget a {
+  font-size: 28px;
+}
+
+.widget_authors img {
+  float: right;
+  margin-left: 15px;
+}
+
+.widget_authors li {
+  margin-bottom: 15px;
+}
+
+.widget_authors li:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.widget_author_grid {
+  margin-left: 15px;
 }
 
 @media screen and (max-width: 881px) {
