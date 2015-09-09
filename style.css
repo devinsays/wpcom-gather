@@ -404,12 +404,8 @@ body {
   -webkit-font-smoothing: antialiased;
   word-wrap: break-word;
   min-height: 100%;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -464,9 +460,7 @@ a:active {
 /* Layout
 -------------------------------------------------------------- */
 #page {
-  -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 .content-area {
@@ -699,7 +693,6 @@ a:active {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: pointer;
-  transition: -webkit-transform .2s ease-in-out;
   transition: transform .2s ease-in-out;
 }
 
@@ -749,9 +742,7 @@ a:active {
   }
 
   .dropdown-toggle.toggled:after {
-    -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
 }
 /* Large Screen Styles
@@ -1341,8 +1332,15 @@ a:active {
   margin-left: 0;
 }
 
+/* Calendar */
 #calendar_wrap {
-  overflow-x: scroll;
+  font-size: 13px;
+}
+
+#calendar_wrap th,
+#calendar_wrap td {
+  padding: 2%;
+  text-align: center;
 }
 
 @media screen and (max-width: 881px) {
@@ -1959,3 +1957,5 @@ object {
 .video-player {
   margin-bottom: 30px;
 }
+
+/*# sourceMappingURL=style.css.map */
