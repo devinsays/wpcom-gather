@@ -133,11 +133,13 @@
 			$( document.body ).on( 'post-load', function () {
 
 				infinite_count = infinite_count + 1;
-				var $selector = $('#infinite-view-' + infinite_count);
-				var $elements = $selector.find('.module');
-				$('#posts-wrap').masonry( 'appended', $elements );
+				var $newItems = $( '#infinite-view-' + infinite_count  ).not('.is--replaced');
+				var $elements = $newItems.find('.module');
+				$elements.hide();
+				self.cache.$postswrap.append($elements);
 				$elements.imagesLoaded( function() {
-					$('#posts-wrap').masonry();
+					self.cache.$postswrap.masonry( "appended", $elements, true ).masonry( "reloadItems" ).masonry( "layout" );
+					$elements.fadeIn();
 				});
 
 			});
