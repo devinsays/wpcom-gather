@@ -165,7 +165,7 @@ a:active {
 
 /* General Responsive Layout */
 
-@media screen and (max-width: 881px ) {
+@media screen and ( max-width: 881px ) {
 	#page .content-area {
 		float: none;
 		margin: 30px 0 0;
@@ -180,7 +180,7 @@ a:active {
 	}
 }
 
-@media screen and (max-width:510px) {
+@media screen and ( max-width: 510px ) {
 	.single #page .content-area {
 		margin-top: 0;
 		border-top: 1px solid #f2f2f2;
@@ -236,7 +236,7 @@ a:active {
 	margin-top:15px;
 }
 
-@media screen and (max-width:881px) {
+@media screen and ( max-width:881px ) {
 	.site-branding {
 		text-align: center;
 	}
@@ -915,7 +915,7 @@ a:active {
 	color: #999
 }
 
-@media screen and (min-width:510px) and (max-width:880px) {
+@media screen and ( min-width:510px ) and ( max-width:880px ) {
 	.footer-widgets.columns-2 .widget,
 	.footer-widgets.columns-3 .widget {
 		width:45%;
@@ -948,7 +948,7 @@ a:active {
 
 }
 
-@media screen and (max-width:510px) {
+@media screen and ( max-width:510px ) {
 	.footer-widgets .widget {
 		margin-bottom:15px;
 	}
