@@ -25,8 +25,10 @@ if ( post_password_required() ) {
 	<?php if ( have_comments() ) : ?>
 		<h3 class="comments-title">
 			<?php
-				printf( _nx( '1 Response', '%1$s Responses', get_comments_number(), 'comments title', 'gather' ),
-					number_format_i18n( get_comments_number() ) );
+				printf( // WPCS: XSS OK.
+					esc_html( _nx( '1 Response', '%1$s Responses', get_comments_number(), 'comments title', 'gather' ) ),
+					number_format_i18n( get_comments_number() )
+				);
 			?>
 		</h3>
 
