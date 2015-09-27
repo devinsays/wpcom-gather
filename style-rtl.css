@@ -967,7 +967,7 @@ a:active {
 }
 
 .entry-header {
-  padding: 4% 8%;
+  padding: 4% 6%;
   text-align: center;
 }
 
@@ -1019,7 +1019,7 @@ a:active {
 .entry-image {
   display: block;
   position: relative;
-  margin: 0 8% 4%;
+  margin: 0 6% 4%;
   overflow: hidden;
 }
 
@@ -1065,7 +1065,7 @@ a:active {
 .entry-content,
 .author-meta,
 .entry-footer-meta {
-  padding: 0 8% 4%;
+  padding: 0 6% 4%;
 }
 
 /* Author Meta*/
@@ -1150,15 +1150,18 @@ a:active {
   margin-top: 20px;
 }
 
-@media screen and (max-width: 510px) {
-  .entry-title {
-    padding: 6%;
+@media screen and (min-width: 510px) {
+  .entry-image {
+    margin-left: 8%;
+    margin-right: 8%;
   }
 
+  .entry-header,
   .entry-content,
   .author-meta,
   .entry-footer-meta {
-    padding: 0 6% 6%;
+    padding-left: 8%;
+    padding-right: 8%;
   }
 }
 /* Post Formats
@@ -1382,7 +1385,7 @@ a:active {
   border-radius: 100%;
 }
 
-@media screen and (max-width: 881px) {
+@media screen and (min-width: 880px) {
   .secondary .widget {
     margin-bottom: 0px;
     padding: 15px 8%;
@@ -1422,11 +1425,11 @@ a:active {
 }
 
 .site-main .comment-navigation {
-  padding: 0 8% 0;
+  padding: 0 6% 0;
 }
 
 .site-main #comment-nav-below {
-  padding: 4% 8% 0;
+  padding: 4% 6% 0;
 }
 
 .posts-navigation a {
@@ -1440,7 +1443,7 @@ a:active {
 
 .post-navigation .nav-previous,
 .post-navigation .nav-next {
-  padding: 30px 8%;
+  padding: 30px 6%;
 }
 
 .post-navigation .nav-next {
@@ -1478,15 +1481,16 @@ a:active {
 }
 
 .comments-title {
-  padding: 4% 8% 0;
+  padding: 4% 6% 0;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   font-weight: 400;
   color: #666;
+  margin: 0 0 15px;
 }
 
 .no-comments {
   margin: 0;
-  padding: 4% 8%;
+  padding: 4% 6%;
   text-align: center;
 }
 
@@ -1500,7 +1504,7 @@ a:active {
 
 .comment-list {
   margin: 0;
-  padding: 4% 8%;
+  padding: 4% 6%;
   list-style: none;
   border-bottom: 1px solid #F0F0F0;
 }
@@ -1508,12 +1512,6 @@ a:active {
 .comment-list .children {
   list-style: none;
   margin: 0;
-}
-
-.comments-title {
-  color: #666;
-  font-weight: 400;
-  margin: 0 0 15px;
 }
 
 .comment,
@@ -1607,7 +1605,7 @@ a:active {
 }
 
 #respond {
-  padding: 4% 8% !important;
+  padding: 4% 6% !important;
 }
 
 .comment-list #respond {
@@ -1678,6 +1676,18 @@ a:active {
     display: block;
     width: 80%;
   }
+
+  .comments-title,
+  .no-comments,
+  #respond,
+  .comment-list {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  #respond {
+    padding: 4% 8% !important;
+  }
 }
 /* Footer
 --------------------------------------------------------------*/
@@ -1704,6 +1714,21 @@ a:active {
   color: #999;
 }
 
+.footer-widgets .col-width,
+#colophon .col-width {
+  width: 100%;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+@media screen and (min-width: 510px) {
+  .footer-widgets .col-width,
+  #colophon .col-width {
+    width: 96%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 @media screen and (min-width: 510px) and (max-width: 880px) {
   .footer-widgets.columns-2 .widget,
   .footer-widgets.columns-3 .widget {
@@ -1736,17 +1761,6 @@ a:active {
 
   .footer-widgets.columns-3 .widget:nth-of-type(3n) {
     margin-left: 0;
-  }
-}
-@media screen and (max-width: 510px) {
-  .footer-widgets .widget {
-    margin-bottom: 15px;
-  }
-
-  .footer-widgets .col-width,
-  #colophon .col-width {
-    padding-left: 8%;
-    padding-right: 8%;
   }
 }
 /* Accessibility
