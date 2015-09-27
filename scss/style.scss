@@ -257,7 +257,7 @@ a:active {
 	/* Required for theme review */
 }
 .entry-header {
-	padding:4% 8%;
+	padding: 4% 8%;
 	text-align: center;
 }
 .entry-title {
@@ -443,25 +443,25 @@ a:active {
 --------------------------------------------------------------*/
 
 #content blockquote {
-	background:#f6f6f6;
-	margin:0 0 20px;
-	padding:20px;
-	border-left:4px solid $primary-color;
+	background: #f6f6f6;
+	margin: 0 0 20px;
+	padding: 20px;
+	border-left: 4px solid $primary-color;
 }
 #content blockquote cite {
 	display: inline-block;
-	margin-top:.5em;
-	font-size:16px;
+	margin-top: .5em;
+	font-size: 16px;
 }
 #content blockquote cite:before {
 	content: '\2014';
-	margin-right:.5em;
+	margin-right: .5em;
 }
 #content blockquote p:last-of-type {
 	margin-bottom:0;
 }
 .single #content blockquote {
-	font-size:18px;
+	font-size: 18px;
 }
 
 /* Masonry
@@ -639,7 +639,7 @@ a:active {
 @media screen and (max-width: 881px ) {
 	.secondary .widget {
 		margin-bottom: 0px;
-		padding: 15px 6%;
+		padding: 15px 8%;
 	}
 }
 
@@ -674,13 +674,13 @@ a:active {
 	font-size: 15px;
 }
 .site-main .comment-navigation {
-	padding: 0 6% 0;
+	padding: 0 8% 0;
 }
 .site-main #comment-nav-below {
-	padding: 4% 6% 0;
+	padding: 4% 8% 0;
 }
 .posts-navigation a {
-	padding:15px 30px;
+	padding: 15px 30px;
 	display: inline-block;
 }
 .post-navigation {
@@ -688,7 +688,7 @@ a:active {
 }
 .post-navigation .nav-previous,
 .post-navigation .nav-next {
-	padding: 30px 6%;
+	padding: 30px 8%;
 }
 .post-navigation .nav-next {
 	border-top: 1px solid #f0f0f0;
@@ -696,7 +696,7 @@ a:active {
 
 @media screen and (min-width: 510px ) {
 	.post-navigation {
-		padding:30px 6%;
+		padding: 30px 8%;
 	}
 	.post-navigation .nav-previous,
 	.post-navigation .nav-next {
@@ -724,14 +724,14 @@ a:active {
 	border-top: 1px solid #f0f0f0;
 }
 .comments-title {
-	padding:4% 6% 0;
+	padding: 4% 8% 0;
 	font-family: $primary-font;
 	font-weight:400;
-	color:#666;
+	color: #666;
 }
 .no-comments {
 	margin:0;
-	padding:4% 6%;
+	padding: 4% 8%;
 	text-align: center;
 }
 .comment-content a {
@@ -742,7 +742,7 @@ a:active {
 }
 .comment-list {
 	margin:0;
-	padding:4% 6%;
+	padding: 4% 8%;
 	list-style: none;
 	border-bottom: 1px solid #F0F0F0;
 }
@@ -751,7 +751,7 @@ a:active {
 	margin: 0;
 }
 .comments-title {
-	color:#666;
+	color: #666;
 	font-weight:400;
 	margin: 0 0 15px;
 }
@@ -832,7 +832,7 @@ a:active {
 	margin-bottom: 30px;
 }
 #respond {
-	padding:4% 6%;
+	padding: 4% 8% !important; // Override WPCom styles
 }
 .comment-list #respond {
 	padding: 4% 0;
@@ -857,8 +857,8 @@ a:active {
 }
 #cancel-comment-reply-link {
 	text-transform: uppercase;
-	font-size:12px;
-	font-weight:600;
+	font-size: 12px;
+	font-weight: 600;
 }
 
 @media screen and (min-width:510px) {
@@ -918,8 +918,8 @@ a:active {
 @media screen and ( min-width:510px ) and ( max-width:880px ) {
 	.footer-widgets.columns-2 .widget,
 	.footer-widgets.columns-3 .widget {
-		width:45%;
-		margin-right:10%;
+		width: 45%;
+		margin-right: 10%;
 		float:left;
 	}
 	.footer-widgets.columns-2 .widget:nth-of-type(2n),
@@ -930,9 +930,9 @@ a:active {
 
 @media screen and (min-width:881px) {
 	.footer-widgets.columns-2 .widget {
-		width:45%;
-		margin-right:10%;
-		float:left;
+		width: 45%;
+		margin-right: 10%;
+		float: left;
 	}
 	.footer-widgets.columns-2 .widget:nth-of-type(2n) {
 		margin-right:0;
@@ -950,12 +950,12 @@ a:active {
 
 @media screen and ( max-width:510px ) {
 	.footer-widgets .widget {
-		margin-bottom:15px;
+		margin-bottom: 15px;
 	}
 	.footer-widgets .col-width,
 	#colophon .col-width {
-		padding-right: 6%;
-		padding-left: 6%;
+		padding-right: 8%;
+		padding-left: 8%;
 	}
 }
 
@@ -1062,8 +1062,8 @@ object {
 .gallery-item img {
 	width:100%;
 	display: block;
-	padding-right:5%;
-	padding-bottom:5%;
+	padding-right: 5%;
+	padding-bottom: 5%;
 }
 .gallery-columns-1 .gallery-item img {
 	padding-right:0;
@@ -1127,7 +1127,7 @@ object {
 }
 .infinite-scroll.masonry #posts-wrap {
 	display: relative;
-	padding-bottom:90px;
+	padding-bottom: 90px;
 }
 #content #infinite-handle span {
 	background: #fff;

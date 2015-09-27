@@ -1385,7 +1385,7 @@ a:active {
 @media screen and (max-width: 881px) {
   .secondary .widget {
     margin-bottom: 0px;
-    padding: 15px 6%;
+    padding: 15px 8%;
   }
 }
 /* Paging Navigation
@@ -1422,11 +1422,11 @@ a:active {
 }
 
 .site-main .comment-navigation {
-  padding: 0 6% 0;
+  padding: 0 8% 0;
 }
 
 .site-main #comment-nav-below {
-  padding: 4% 6% 0;
+  padding: 4% 8% 0;
 }
 
 .posts-navigation a {
@@ -1440,7 +1440,7 @@ a:active {
 
 .post-navigation .nav-previous,
 .post-navigation .nav-next {
-  padding: 30px 6%;
+  padding: 30px 8%;
 }
 
 .post-navigation .nav-next {
@@ -1449,7 +1449,7 @@ a:active {
 
 @media screen and (min-width: 510px) {
   .post-navigation {
-    padding: 30px 6%;
+    padding: 30px 8%;
   }
 
   .post-navigation .nav-previous,
@@ -1478,7 +1478,7 @@ a:active {
 }
 
 .comments-title {
-  padding: 4% 6% 0;
+  padding: 4% 8% 0;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   font-weight: 400;
   color: #666;
@@ -1486,7 +1486,7 @@ a:active {
 
 .no-comments {
   margin: 0;
-  padding: 4% 6%;
+  padding: 4% 8%;
   text-align: center;
 }
 
@@ -1500,7 +1500,7 @@ a:active {
 
 .comment-list {
   margin: 0;
-  padding: 4% 6%;
+  padding: 4% 8%;
   list-style: none;
   border-bottom: 1px solid #F0F0F0;
 }
@@ -1607,7 +1607,7 @@ a:active {
 }
 
 #respond {
-  padding: 4% 6%;
+  padding: 4% 8% !important;
 }
 
 .comment-list #respond {
@@ -1745,8 +1745,8 @@ a:active {
 
   .footer-widgets .col-width,
   #colophon .col-width {
-    padding-left: 6%;
-    padding-right: 6%;
+    padding-left: 8%;
+    padding-right: 8%;
   }
 }
 /* Accessibility
