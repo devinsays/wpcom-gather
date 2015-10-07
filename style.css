@@ -1385,6 +1385,16 @@ a:active {
   border-radius: 100%;
 }
 
+/* Recent Comments */
+.widget_recent_comments {
+  border: none !important;
+}
+
+.widget_recent_comments td {
+  border: none !important;
+  vertical-align: top !important;
+}
+
 @media screen and (min-width: 880px) {
   .secondary .widget {
     margin-bottom: 0px;

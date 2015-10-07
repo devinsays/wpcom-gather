@@ -591,7 +591,9 @@ a:active {
 	font-size: $primary-font-size;
 	color: #555;
 }
+
 /* Make sure select elements fit in widgets */
+
 .widget select {
 	max-width: 100%;
 }
@@ -612,7 +614,6 @@ a:active {
 }
 
 /* Extended Widget Support */
-
 .widget_wpcom_social_media_icons_widget a {
 	font-size: 28px;
 }
@@ -635,6 +636,15 @@ a:active {
 }
 .widget_author_grid img {
 	border-radius: 100%;
+}
+
+/* Recent Comments */
+.widget_recent_comments {
+	border: none !important;
+}
+.widget_recent_comments td {
+	border: none !important;
+	vertical-align: top !important;
 }
 
 @media screen and (min-width: 880px ) {
