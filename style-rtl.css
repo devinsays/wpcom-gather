@@ -1382,13 +1382,18 @@ a:active {
 }
 
 /* Recent Comments */
-.widget_recent_comments {
+.widget_recent_comments,
+.widget_recent_comments .recentcommentsavatar {
   border: none !important;
 }
 
 .widget_recent_comments td {
   border: none !important;
   vertical-align: top !important;
+}
+
+.widget_recent_comments td.recentcommentstexttop {
+  padding: 0px 10px 10px 0px;
 }
 
 @media screen and (min-width: 880px) {
