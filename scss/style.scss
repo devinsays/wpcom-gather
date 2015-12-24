@@ -1143,15 +1143,6 @@ object {
 #infinite-handle {
 	clear:both;
 }
-.masonry #infinite-handle {
-	width:100%;
-	position: absolute;
-	bottom:0;
-}
-.infinite-scroll.masonry #posts-wrap {
-	display: relative;
-	padding-bottom: 90px;
-}
 #content #infinite-handle span {
 	background: #fff;
 	border-radius: 4px;
@@ -1172,9 +1163,27 @@ object {
 	box-shadow: none;
 }
 .infinite-loader {
-	position: absolute;
-	left: 50%;
-	bottom: 30px;
+	margin-bottom: 30px;
+}
+@media screen and (min-width:881px) {
+	.masonry #infinite-handle {
+		width:100%;
+		position: absolute;
+		bottom:0;
+	}
+	.infinite-scroll.masonry #posts-wrap {
+		display: relative;
+		padding-bottom: 90px;
+	}
+	.infinity-success.masonry #posts-wrap {
+		padding-bottom: 0px;
+	}
+	.infinite-loader {
+		position: absolute;
+		left: 50%;
+		bottom: 30px;
+		margin-bottom: 0;
+	}
 }
 /* Globally hide elements when Infinite Scroll is supported and in use. */
 .infinite-scroll .posts-navigation,
@@ -1208,4 +1217,9 @@ object {
 /* Video Player */
 .video-player {
 	margin-bottom: 30px;
+}
+
+/* Stats */
+#wpstats {
+	display: none;
 }

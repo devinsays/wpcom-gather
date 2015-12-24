@@ -20,19 +20,27 @@ function gather_display_customizations() {
 
 	$css = '';
 
+	// Header Image
+	$image = get_header_image();
+	if ( '' != $image ) {
+		$css .= '.site-branding { background-image:url("' . esc_url( $image ) . '"); }' . "\n";
+	}
+
 	// Center Header Text
 	$setting = 'center-branding';
 	$mod = get_theme_mod( $setting, 0 );
 	if ( $mod ) {
-		$css .= '.site-branding { text-align: center; }\n';
+		$css .= ".site-branding { text-align: center; }\n";
 	}
 
 	// Logo Margin if Header Text Active
 	$setting = 'site_logo_header_text';
-	$mod = get_theme_mod( $setting, 1 );
+	$mod = get_theme_mod( 'site_logo_header_text', 1 );
 	if ( $mod && function_exists( 'jetpack_has_site_logo' ) && jetpack_has_site_logo() ) {
-		$css .= '.site-logo-link { margin-bottom: 30px; }\n';
+		$css .= ".site-logo-link { margin-bottom: 30px; }\n";
 	}
+
+	// Hide Header Text if Checkbox Deactivated
 
 	if ( ! empty( $css ) ) {
 		echo "\n<!-- Gather Inline Styles -->\n<style type=\"text/css\" id=\"gather-custom-css\">\n";

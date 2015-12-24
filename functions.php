@@ -62,6 +62,14 @@ function gather_setup() {
 		'default-color' => 'f2f2f2',
 		'default-image' => '',
 	) ) );
+
+	add_theme_support( 'custom-header', array(
+		'default-text-color'     => 'ffffff',
+		'width'                  => 1280,
+		'height'                 => 180,
+		'flex-height'            => false
+	) );
+
 }
 endif; // gather_setup
 add_action( 'after_setup_theme', 'gather_setup' );
