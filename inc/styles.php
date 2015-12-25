@@ -33,14 +33,27 @@ function gather_display_customizations() {
 		$css .= ".site-branding { text-align: center; }\n";
 	}
 
+	// Header Background Color
+	$setting = 'header-background-color';
+	$mod = get_theme_mod( $setting, 0 );
+	if ( $mod ) {
+		$css .= ".site-branding { background-color: " . sanitize_hex_color( $mod ) . "; }\n";
+	}
+
 	// Logo Margin if Header Text Active
-	$setting = 'site_logo_header_text';
-	$mod = get_theme_mod( 'site_logo_header_text', 1 );
-	if ( $mod && function_exists( 'jetpack_has_site_logo' ) && jetpack_has_site_logo() ) {
+	$jetpack_logo = function_exists( 'jetpack_has_site_logo' ) && jetpack_has_site_logo();
+	if ( ( 'blank' != get_header_textcolor() ) && $jetpack_logo ) {
 		$css .= ".site-logo-link { margin-bottom: 30px; }\n";
 	}
 
-	// Hide Header Text if Checkbox Deactivated
+	// Set Minimum Height for Header
+	if ( 'blank' == get_header_textcolor() ) {
+		$css .= ".site-title, .site-description { position: absolute; clip: rect(1px, 1px, 1px, 1px); }\n";
+	}
+
+	if ( 'blank' == get_header_textcolor() && ! $jetpack_logo ) {
+		$css .= ".site-branding { min-height: 180px; }\n";
+	}
 
 	if ( ! empty( $css ) ) {
 		echo "\n<!-- Gather Inline Styles -->\n<style type=\"text/css\" id=\"gather-custom-css\">\n";

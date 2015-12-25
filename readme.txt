@@ -19,6 +19,13 @@ If you have Grunt installed, just run `npm install` in the theme directory to do
 
 ## Change Log
 
+1.1.0
+---
+
+* Add header image option
+* Add header background color option
+* Fix syntax for inline styles
+
 1.0.0
 ---
 

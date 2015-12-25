@@ -31,6 +31,24 @@ function gather_customize_controls( $wp_customize ) {
 		'type'      => 'checkbox'
 	) );
 
+	$wp_customize->add_setting( 'header-background-color', array(
+		'default'    =>  '#ffffff',
+		'transport'  =>  'transport',
+		'sanitize_callback' => 'sanitize_hex_color'
+	) );
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+		$wp_customize,
+			'header-background-color',
+			array(
+				'label'      => __( 'Header Background Color', 'gather' ),
+				'section'    => 'theme-options',
+			)
+		)
+	);
+
+	// Layout Settings
 	$wp_customize->add_setting( 'standard-layout', array(
 		'transport'  =>  'refresh',
 		'default' => 'sidebar-right',
@@ -85,6 +103,9 @@ function gather_customize_controls( $wp_customize ) {
 		'type'      => 'checkbox'
 	) );
 
+	// Remove "Header Text Color" option added by Custom Header
+	$wp_customize->remove_control( 'header_textcolor' );
+
 }
 add_action( 'customize_register', 'gather_customize_controls' );
 
@@ -97,6 +118,7 @@ function gather_customize_transports( $wp_customize ) {
 
 	$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+	$wp_customize->get_setting( 'header-background-color' )->transport  = 'postMessage';
 
 }
 add_action( 'customize_register', 'gather_customize_transports' );
@@ -251,3 +273,25 @@ function gather_sanitize_standard_layout( $value ) {
 	return $value;
 }
 endif; // gather_sanitize_standard_layout
+
+if ( ! function_exists( 'sanitize_hex_color' ) ) :
+/**
+ * Sanitizes a hex color.
+ *
+ * Returns either '', a 3 or 6 digit hex color (with #), or null.
+ * For sanitizing values without a #, see sanitize_hex_color_no_hash().
+ *
+ * @since 3.4.0
+ *
+ * @param string $color
+ * @return string|null
+ */
+function sanitize_hex_color( $color ) {
+	if ( '' === $color )
+		return '';
+	// 3 or 6 hex digits, or the empty string.
+	if ( preg_match('|^#([A-Fa-f0-9]{3}){1,2}$|', $color ) )
+		return $color;
+	return null;
+}
+endif;
