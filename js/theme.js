@@ -12,7 +12,8 @@
 			$document: $(document),
 			$window: $(window),
 			$postswrap: $('#posts-wrap'),
-			masonry : false
+			masonry : false,
+			masonryLoaded: false
 		},
 
 		// Init functions
@@ -103,8 +104,18 @@
 
 			var width = document.body.clientWidth;
 
+			// So cached selectors can be used in functions
+			var self = this;
+
 			// If body width is less than 510px we'll display as a single column
 			if ( width <= 510 ) {
+
+				// If screen has been resized to below 510, remove masonry.
+				// This ensures "Load More" button loads properly.
+				if ( self.cache.masonryLoaded ) {
+					self.cache.$postswrap.masonry().masonry('destroy');
+				}
+
 				return;
 			}
 
@@ -115,9 +126,6 @@
 				gutter = 20;
 			}
 
-			// So cached selectors can be used in functions
-			var self = this;
-
 			// Initialize
 			this.cache.$postswrap.imagesLoaded( function() {
 				self.cache.$postswrap.find('.module').css({ 'margin-right' : 0 });
@@ -125,6 +133,7 @@
 					itemSelector: '.module',
 					gutter : gutter
 				});
+				self.cache.masonryLoaded = true;
 			});
 
 			// For Infinite Scroll

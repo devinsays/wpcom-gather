@@ -25,6 +25,7 @@ If you have Grunt installed, just run `npm install` in the theme directory to do
 * Add header image option
 * Add header background color option
 * Fix syntax for inline styles
+* Resolve issues with screen resize and "Read More" button
 
 1.0.0
 ---
