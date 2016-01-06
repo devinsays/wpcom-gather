@@ -8,7 +8,7 @@
 /**
  * The current version of the theme.
  */
-define( 'GATHER_VERSION', '1.1.0' );
+define( 'GATHER_VERSION', '1.2.0' );
 
 if ( ! function_exists( 'gather_setup' ) ) :
 /**

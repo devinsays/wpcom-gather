@@ -33,13 +33,6 @@ function gather_display_customizations() {
 		$css .= ".site-branding { text-align: center; }\n";
 	}
 
-	// Header Background Color
-	$setting = 'header-background-color';
-	$mod = get_theme_mod( $setting, 0 );
-	if ( $mod ) {
-		$css .= ".site-branding { background-color: " . sanitize_hex_color( $mod ) . "; }\n";
-	}
-
 	// Logo Margin if Header Text Active
 	$jetpack_logo = function_exists( 'jetpack_has_site_logo' ) && jetpack_has_site_logo();
 	if ( ( 'blank' != get_header_textcolor() ) && $jetpack_logo ) {

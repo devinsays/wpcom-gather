@@ -19,11 +19,4 @@
 		} );
 	} );
 
-	// Header Background Color
-	wp.customize( 'header-background-color', function( value ) {
-		value.bind( function( to ) {
-			$('.site-branding').css({ 'background-color' : to });
-		} );
-	} );
-
 } )( jQuery );
