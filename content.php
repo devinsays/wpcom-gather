@@ -27,7 +27,9 @@
 		<?php if ( 'excerpt' == get_theme_mod( 'archive-content', 'excerpt' ) || has_excerpt() ) {
 			the_excerpt();
 		} else {
-			the_content( esc_html__( 'Continue reading <span class="meta-nav">&rarr;</span>', 'gather' ) );
+			the_content(
+				wp_kses_post( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'gather' ) )
+			);
 		} ?>
 		<?php wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'gather' ),
