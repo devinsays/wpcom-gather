@@ -84,6 +84,7 @@
 					</div>
 					<?php wp_nav_menu( array(
 						'theme_location' => 'secondary',
+						'menu_class' => 'secondary-menu',
 						'link_before' => '<span>',
 						'link_after' => '</span>'
 					) ); ?>
