@@ -79,7 +79,7 @@
 		<?php if ( has_nav_menu( 'secondary' ) ) : ?>
 			<nav id="secondary-navigation" class="main-navigation clearfix" role="navigation">
 				<div class="col-width">
-					<div class="menu-toggle" data-toggle="#secondary-navigation .menu">
+					<div class="menu-toggle" data-toggle="#secondary-navigation .secondary-menu">
 						<?php echo esc_html( gather_get_menu_name( 'secondary' ) ); ?>
 					</div>
 					<?php wp_nav_menu( array(
