@@ -13,7 +13,8 @@
 			$window: $(window),
 			$postswrap: $('#posts-wrap'),
 			masonry : false,
-			masonryLoaded: false
+			masonryLoaded: false,
+			windowWidth : $(window).width()
 		},
 
 		// Init functions
@@ -43,15 +44,24 @@
 			this.cache.$window.on( 'resize', self.debounce(
 				function() {
 
-					// Remove any inline styles that may have been added to menu
-					$('.main-navigation .menu, .main-navigation .primary-menu, .main-navigation .social-menu').attr('style','');
-					$('.main-navigation').find('.children, .sub-menu').each( function(){
-		    			$(this).attr('style','');
-					});
+					// Required for Mobile Safari bug where resize event triggered on scroll.
+					newWindowWidth = self.cache.$window.width();
 
-					$('.main-navigation').find('.dropdown-toggle').each( function(){
-						$(this).removeClass('toggled');
-					});
+					if ( newWindowWidth != self.cache.windowWidth ) {
+
+						// Remove any inline styles that may have been added to menu
+						$('.main-navigation .menu, .main-navigation .primary-menu, .main-navigation .social-menu').attr('style','');
+						$('.main-navigation').find('.children, .sub-menu').each( function(){
+			    			$(this).attr('style','');
+						});
+
+						$('.main-navigation').find('.dropdown-toggle').each( function(){
+							$(this).removeClass('toggled');
+						});
+
+						self.cache.windowWidth = newWindowWidth;
+
+					}
 
 				}, 200 )
 			);
