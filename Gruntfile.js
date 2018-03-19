@@ -4,32 +4,35 @@ module.exports = function(grunt) {
 	// load all tasks
 	require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
 
-    grunt.initConfig({
+	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		watch: {
 			files: ['scss/*.scss'],
-			tasks: 'sass',
+			tasks: ['sass', 'postcss'],
 			options: {
 				livereload: true,
 			},
 		},
 		sass: {
 			default: {
-		  		options : {
-			  		style : 'expanded'
-			  	},
-			  	files: {
-					'style.css':'scss/style.scss',
+				options : {
+					style : 'expanded',
+					sourceMap: true
+				},
+				files: {
+					'style.css': 'scss/style.scss',
 				}
 			}
 		},
-	    autoprefixer: {
-            options: {
-				browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1', 'ie 9']
+		postcss: {
+			options: {
+			map: true,
+			processors: [
+				require('autoprefixer-core')({browsers: 'last 2 versions'}),
+			]
 			},
-			single_file: {
-				src: 'style.css',
-				dest: 'style.css'
+			files: {
+				'style.css':'style.css'
 			}
 		},
 		cssjanus: {
@@ -45,7 +48,7 @@ module.exports = function(grunt) {
 				]
 			}
 		},
-	    replace: {
+		replace: {
 			styleVersion: {
 				src: [
 					'scss/style.scss',
@@ -71,13 +74,13 @@ module.exports = function(grunt) {
 
 	grunt.registerTask( 'default', [
 		'sass',
-		'autoprefixer',
-    ]);
+		'postcss'
+	]);
 
-    grunt.registerTask( 'release', [
-    	'replace',
-    	'sass',
-    	'autoprefixer',
+	grunt.registerTask( 'release', [
+		'replace',
+		'sass',
+		'postcss',
 		'cssjanus'
 	]);
 

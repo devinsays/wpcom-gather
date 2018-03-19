@@ -19,6 +19,11 @@ If you have Grunt installed, just run `npm install` in the theme directory to do
 
 ## Change Log
 
+1.2.0
+---
+
+* Update: Packages (Autoprefixer, Sass, etc.)
+
 1.1.0
 ---
 
