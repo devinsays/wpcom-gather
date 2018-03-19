@@ -16,7 +16,7 @@ module.exports = function(grunt) {
 		sass: {
 			default: {
 				options : {
-					style : 'expanded',
+					outputStyle : 'expanded',
 					sourceMap: true
 				},
 				files: {
@@ -26,10 +26,10 @@ module.exports = function(grunt) {
 		},
 		postcss: {
 			options: {
-			map: true,
-			processors: [
-				require('autoprefixer-core')({browsers: 'last 2 versions'}),
-			]
+				map: true,
+				processors: [
+					require('autoprefixer-core')({browsers: 'last 2 versions'}),
+				]
 			},
 			files: {
 				'style.css':'style.css'
