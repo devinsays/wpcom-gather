@@ -19,7 +19,7 @@ If you have Grunt installed, just run `npm install` in the theme directory to do
 
 ## Change Log
 
-1.1.1
+1.2.1
 ---
 
 * Fix: Improved Infinite Scroll button positioning with masonry grid.
