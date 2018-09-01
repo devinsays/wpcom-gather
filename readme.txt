@@ -19,6 +19,11 @@ If you have Grunt installed, just run `npm install` in the theme directory to do
 
 ## Change Log
 
+Development
+---
+
+* Update: Grunt packages.
+
 1.2.1
 ---
 
@@ -28,12 +33,12 @@ If you have Grunt installed, just run `npm install` in the theme directory to do
 1.1.0
 ---
 
-* Add header image option
-* Add header background color option
-* Fix syntax for inline styles
-* Resolve issues with screen resize and "Read More" button
+* Add header image option.
+* Add header background color option.
+* Fix syntax for inline styles.
+* Resolve issues with screen resize and "Read More" button.
 
 1.0.0
 ---
 
-* WordPress.com release
+* WordPress.com release.
