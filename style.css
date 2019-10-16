@@ -4,7 +4,7 @@ Theme URI: https://devpress.com/gather
 Author: DevPress
 Author URI: https://devpress.com
 Description: Gather is a highly adaptable theme for displaying products, art, and content. Multiple menu locations, social icons, and widget areas are available. Gather is responsive and looks great on all devices.
-Version: 1.2.1
+Version: 1.3.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: gather
@@ -235,6 +235,7 @@ textarea {
 
 button,
 .button,
+.wp-block-button__link,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -253,25 +254,27 @@ input[type="submit"] {
   box-shadow: inset 0 -2px rgba(0, 0, 0, 0.2);
   color: #fff;
   font-size: 15px; }
-
-button:hover,
-.button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-  background: #49b97f; }
-
-button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-button:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
-  box-shadow: inset 0 2px rgba(0, 0, 0, 0.15);
-  padding: 8px 20px;
-  outline: none; }
+  button:hover,
+  .button:hover,
+  .wp-block-button__link:hover,
+  input[type="button"]:hover,
+  input[type="reset"]:hover,
+  input[type="submit"]:hover {
+    background: #49b97f; }
+  button:focus, button:hover,
+  .button:focus,
+  .button:hover,
+  .wp-block-button__link:focus,
+  .wp-block-button__link:hover,
+  input[type="button"]:focus,
+  input[type="button"]:hover,
+  input[type="reset"]:focus,
+  input[type="reset"]:hover,
+  input[type="submit"]:focus,
+  input[type="submit"]:hover {
+    box-shadow: inset 0 2px rgba(0, 0, 0, 0.15);
+    padding: 8px 20px;
+    outline: none; }
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -303,17 +306,16 @@ textarea {
   padding: 8px;
   width: 100%;
   border-radius: 3px; }
-
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="date"]:focus,
-input[type="email"]:focus,
-input[type="search"]:focus,
-input[type="url"]:focus,
-textarea:focus {
-  background-color: #fff;
-  outline: none;
-  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.2); }
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="date"]:focus,
+  input[type="email"]:focus,
+  input[type="search"]:focus,
+  input[type="url"]:focus,
+  textarea:focus {
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.2); }
 
 input[type="search"]::-webkit-search-decoration {
   /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
@@ -787,9 +789,8 @@ a:active {
   font-size: 13px;
   text-align: center;
   text-transform: uppercase; }
-
-.entry-meta a {
-  color: #666; }
+  .entry-meta a {
+    color: #666; }
 
 .entry-image-section {
   position: relative; }
@@ -854,8 +855,8 @@ a:active {
     width: 32px;
     float: left;
     margin: 0 15px 10px 0; }
-  .author-box .author-avatar img {
-    border-radius: 50%; }
+    .author-box .author-avatar img {
+      border-radius: 50%; }
   .author-box h3 {
     font-size: 18px;
     margin-bottom: 5px;
@@ -922,23 +923,23 @@ a:active {
 
 /* Post Formats
 --------------------------------------------------------------*/
+#content .wp-block-pullquote {
+  padding: 30px 0; }
+
 #content blockquote {
   background: #f6f6f6;
   margin: 0 0 20px;
   padding: 20px;
   border-left: 4px solid #5bc08c; }
-
-#content blockquote cite {
-  display: inline-block;
-  margin-top: .5em;
-  font-size: 16px; }
-
-#content blockquote cite:before {
-  content: '\2014';
-  margin-right: .5em; }
-
-#content blockquote p:last-of-type {
-  margin-bottom: 0; }
+  #content blockquote cite {
+    display: inline-block;
+    margin-top: 0.5em;
+    font-size: 16px; }
+    #content blockquote cite::before {
+      content: '\2014';
+      margin-right: 0.5em; }
+  #content blockquote p:last-of-type {
+    margin-bottom: 0; }
 
 .single #content blockquote {
   font-size: 18px; }
@@ -957,9 +958,8 @@ a:active {
 .masonry .entry-image-link {
   opacity: 1;
   transition: opacity 0.3s ease-in-out; }
-
-.masonry .entry-image-link:hover {
-  opacity: 0.8; }
+  .masonry .entry-image-link:hover {
+    opacity: 0.8; }
 
 .masonry .entry-header {
   padding: 6% 6% 4%; }
@@ -979,10 +979,9 @@ a:active {
   padding: 4% 6%;
   text-decoration: none;
   border-top: 1px solid #eee; }
-
-.masonry .entry-footer-meta a:hover {
-  background: #5bc08c;
-  color: #fff; }
+  .masonry .entry-footer-meta a:hover {
+    background: #5bc08c;
+    color: #fff; }
 
 /* Columns */
 @media screen and (min-width: 881px) {
@@ -1027,7 +1026,8 @@ a:active {
   padding-right: 59px;
   float: left; }
 
-.search-form input, .search-form button {
+.search-form button,
+.search-form input {
   margin: 0; }
 
 .search-form .search-submit {
@@ -1036,8 +1036,8 @@ a:active {
   float: left;
   height: 38px; }
 
-.error404.sidebar-right .site-main,
-.error404.sidebar-left .site-main {
+.error404.sidebar-left .site-main,
+.error404.sidebar-right .site-main {
   margin: 0; }
 
 /* Widgets
@@ -1483,8 +1483,9 @@ object {
   margin: 5px 0; }
 
 /* Galleries */
-.gallery {
-  margin-bottom: 20px; }
+.gallery,
+.wp-block-gallery {
+  margin: 0 0 20px; }
 
 .gallery-item {
   display: inline-block;

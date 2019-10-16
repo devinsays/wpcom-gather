@@ -8,7 +8,7 @@
 /**
  * The current version of the theme.
  */
-define( 'GATHER_VERSION', '1.2.1' );
+define( 'GATHER_VERSION', '1.3.0' );
 
 if ( ! function_exists( 'gather_setup' ) ) :
 /**
@@ -51,7 +51,7 @@ function gather_setup() {
 	 * to output valid HTML5.
 	 */
 	add_theme_support( 'html5', array(
-		'comment-form', 'gallery', 'caption'
+		'comment-form', 'gallery', 'caption', 'script', 'style'
 	) );
 
 	// Post editor styles
