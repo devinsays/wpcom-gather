@@ -1,4 +1,9 @@
 'use strict';
+
+// Packages
+const fiberLibrary = require('fibers');
+const sassLibrary = require('node-sass');
+
 module.exports = function(grunt) {
 
 	// load all tasks
@@ -16,7 +21,9 @@ module.exports = function(grunt) {
 		sass: {
 			default: {
 				options : {
-					outputStyle : 'expanded',
+					implementation: sassLibrary,
+					fiber: fiberLibrary,
+					style : 'expanded',
 					sourceMap: true
 				},
 				files: {
@@ -28,7 +35,7 @@ module.exports = function(grunt) {
 			options: {
 				map: true,
 				processors: [
-					require('autoprefixer')({browsers: 'last 2 versions'}),
+					require('autoprefixer'),
 				]
 			},
 			files: {
