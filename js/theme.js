@@ -3,12 +3,12 @@
  *
  * @since 1.0.0
  */
- (function($) {
+(function($) {
 
- 	var gather = {
+	var gather = {
 
- 		// Cache selectors
-	 	cache: {
+		// Cache selectors
+		cache: {
 			$document: $(document),
 			$window: $(window),
 			$postswrap: $('#posts-wrap'),
@@ -114,18 +114,8 @@
 
 			var width = document.body.clientWidth;
 
-			// So cached selectors can be used in functions
-			var self = this;
-
 			// If body width is less than 510px we'll display as a single column
 			if ( width <= 510 ) {
-
-				// If screen has been resized to below 510, remove masonry.
-				// This ensures "Load More" button loads properly.
-				if ( self.cache.masonryLoaded ) {
-					self.cache.$postswrap.masonry().masonry('destroy');
-				}
-
 				return;
 			}
 
@@ -135,32 +125,39 @@
 			if ( document.body.clientWidth <= 880 ) {
 				gutter = 20;
 			}
+			
+			var $postswrap = this.cache.$postswrap;
+			var self = this;
 
-			// Initialize
-			this.cache.$postswrap.imagesLoaded( function() {
-				self.cache.$postswrap.find('.module').css({ 'margin-right' : 0 });
-				self.cache.$postswrap.masonry({
+			$postswrap.imagesLoaded(function () {
+				$posts = $postswrap.find('.module').css({ 'margin-right' : 0 }).addClass('masonry');
+
+				$postswrap.masonry({
 					itemSelector: '.module',
+					transitionDuration: 0,
 					gutter : gutter
 				});
-				self.cache.masonryLoaded = true;
 			});
+			
+			// Handle Masonry on Resize
+			$(document.body).on( 'jetpack-lazy-loaded-image', self.debounce(
+				function() {
+					$postswrap.masonry('reloadItems').masonry('layout');
+				}, 200 )
+			);
 
-			// For Infinite Scroll
-			var infinite_count = 0;
+			// Layout posts that arrive via infinite scroll.
+			$(document.body).on('post-load', function () {
+				var $newItems = $postswrap.find('.module').not('.masonry');
+				$newItems.css({ 'margin-right' : 0 }).addClass('masonry');
 
-			$( document.body ).on( 'post-load', function () {
+				$newItems.hide();
+				$postswrap.append($newItems);
 
-				infinite_count = infinite_count + 1;
-				var $newItems = $( '#infinite-view-' + infinite_count  ).not('.is--replaced');
-				var $elements = $newItems.find('.module');
-				$elements.hide();
-				self.cache.$postswrap.append($elements);
-				$elements.imagesLoaded( function() {
-					self.cache.$postswrap.masonry( "appended", $elements, true ).masonry( "reloadItems" ).masonry( "layout" );
-					$elements.fadeIn();
+				$postswrap.imagesLoaded(function () {
+					$postswrap.masonry('appended', $newItems, true).masonry('reloadItems').masonry('layout');
+					$newItems.show(200);
 				});
-
 			});
 
 		},
@@ -184,8 +181,8 @@
 			};
 		}
 
- 	};
+	};
 
- 	gather.init();
+	gather.init();
 
- })(jQuery);
+})(jQuery);

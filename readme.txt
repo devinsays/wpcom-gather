@@ -19,6 +19,11 @@ If you have Grunt installed, just run `npm install` in the theme directory to do
 
 ## Change Log
 
+1.4.0
+---
+
+* Fix: Improved support for Jetpack Lazy Load and Infinite Scroll
+
 1.3.0
 ---
 

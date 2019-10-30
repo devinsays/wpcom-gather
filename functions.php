@@ -8,7 +8,7 @@
 /**
  * The current version of the theme.
  */
-define( 'GATHER_VERSION', '1.3.0' );
+define( 'GATHER_VERSION', '1.4.0' );
 
 if ( ! function_exists( 'gather_setup' ) ) :
 /**
@@ -233,7 +233,7 @@ function gather_scripts() {
 	);
 
 	if ( gather_load_masonry() ) {
-		 wp_enqueue_script( 'masonry' );
+		wp_enqueue_script( 'masonry' );
 	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
